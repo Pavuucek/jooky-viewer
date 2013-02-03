@@ -20,16 +20,16 @@ Friend Class Help
 		Back4.ForeColor = System.Drawing.ColorTranslator.FromOle(&HC000C0)
 		NFO.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		'UPGRADE_ISSUE: Form property Help.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
-		Me.Cursor = vbCustom
+        'Me.Cursor = vbCustom
 		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		'UPGRADE_ISSUE: Form property Help.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
+        'Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
 	
 	'UPGRADE_WARNING: Form event Help.Activate has a new behavior. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6BA9B8D2-2A32-4B6E-8D36-44949974A5B4"'
 	Private Sub Help_Activated(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Activated
-		Dim res As String
+        Dim res As String = "640x480"
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) = 9600 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) = 7200 Then res = "640x480"
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) = 12000 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) = 9000 Then res = "800x600"
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) >= 15360 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) >= 11520 Then res = "1024x768"
@@ -60,13 +60,13 @@ Friend Class Help
 	End Sub
 	
 	Private Sub Help_Load(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Load
-		Dim res As String
+        Dim res As String = "640x480"
 		On Error GoTo 1
 		WaitFRM.Show()
 		System.Windows.Forms.Application.DoEvents()
 		'UPGRADE_ISSUE: Constant vbPixels was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
 		'UPGRADE_ISSUE: Form property Help.ScaleMode is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
-		Me.ScaleMode = vbPixels
+        'Me.ScaleMode = vbPixels
 		'Main.Hide
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) = 9600 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) = 7200 Then res = "640x480"
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) = 12000 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) = 9000 Then res = "800x600"
@@ -172,10 +172,10 @@ Friend Class Help
 		NFO.ForeColor = System.Drawing.ColorTranslator.FromOle(&HC000C0)
 		Back4.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		'UPGRADE_ISSUE: Form property Help.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
-		Me.Cursor = vbCustom
+        'Me.Cursor = vbCustom
 		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		'UPGRADE_ISSUE: Form property Help.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
+        'Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
 	
@@ -188,10 +188,10 @@ Friend Class Help
 		NFO.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Back4.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		'UPGRADE_ISSUE: Form property Help.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
-		Me.Cursor = vbCustom
+        'Me.Cursor = vbCustom
 		'UPGRADE_ISSUE: RichTextLib.RichTextBox property LOGboX.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		'UPGRADE_ISSUE: RichTextLib.RichTextBox property RichTextBox1.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		RichTextBox1.MouseIcon = Console.LOGboX.MouseIcon
+        'RichTextBox1.MouseIcon = Console.LOGboX.MouseIcon
 		
 	End Sub
 End Class

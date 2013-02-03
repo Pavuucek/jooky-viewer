@@ -33,8 +33,8 @@ Friend Class Console
 		PlaySound(13)
 		Text1.Text = UCase("unload me")
 		MsgBox("Nemùžeš zavøít konzoli !!!" & Chr(10) & "Pøíkazem 'UNLOAD ME' se zavøe celý DiskMag")
-		'UPGRADE_ISSUE: Event parameter Cancel was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="FB723E3C-1C06-4D2B-B083-E6CD0D334DA8"'
-		Cancel = True
+        'UPGRADE_ISSUE: Event parameter Cancel was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="FB723E3C-1C06-4D2B-B083-E6CD0D334DA8"'
+        'Cancel = True
 	End Sub
 	
 	
@@ -157,10 +157,10 @@ Friend Class Console
 		Dim X As Single = VB6.PixelsToTwipsX(eventArgs.X)
 		Dim Y As Single = VB6.PixelsToTwipsY(eventArgs.Y)
 		'UPGRADE_ISSUE: Form property Console.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
-		Me.Cursor = vbCustom
+        'Me.Cursor = vbCustom
 		'UPGRADE_ISSUE: RichTextLib.RichTextBox property LOGboX.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		'UPGRADE_ISSUE: Form property Console.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		Me.MouseIcon = LOGboX.MouseIcon
+        'Me.MouseIcon = LOGboX.MouseIcon
 		
 	End Sub
 End Class

@@ -8,7 +8,7 @@ Friend Class AMovieFRM
 	
 	
 	Private Sub ActiveMovie1_Error(ByVal eventSender As System.Object, ByVal eventArgs As AxAMovie.DActiveMovieEvents2_ErrorEvent) Handles ActiveMovie1.Error
-		Err.Description = Description
+        Err.Description = eventArgs.description
 		DetError(eventArgs.SCode, "PLAYER")
 	End Sub
 	
@@ -54,10 +54,10 @@ Friend Class AMovieFRM
 		'Option1.ForeColor = &HFFFF&
 		'Option2.ForeColor = &HFFFF&
 		'UPGRADE_ISSUE: Form property AMovieFRM.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
-		Me.Cursor = vbCustom
+        'Me.Cursor = vbCustom
 		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		'UPGRADE_ISSUE: Form property AMovieFRM.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
+        'Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 	End Sub
 	
 	Private Sub File1_SelectedIndexChanged(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles File1.SelectedIndexChanged
@@ -74,7 +74,7 @@ Friend Class AMovieFRM
 		Dim Shift As Short = System.Windows.Forms.Control.ModifierKeys \ &H10000
 		Dim X As Single = VB6.PixelsToTwipsX(eventArgs.X)
 		Dim Y As Single = VB6.PixelsToTwipsY(eventArgs.Y)
-		Dim res As String
+        Dim res As String = "640x480"
 		Back6.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) = 9600 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) = 7200 Then res = "640x480"
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) = 12000 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) = 9000 Then res = "800x600"
@@ -93,17 +93,17 @@ Friend Class AMovieFRM
 		End Select
 		
 		'UPGRADE_ISSUE: Form property AMovieFRM.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
-		Me.Cursor = vbCustom
+        'Me.Cursor = vbCustom
 		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		'UPGRADE_ISSUE: Form property AMovieFRM.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
+        'Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
 	
 	
 	'UPGRADE_WARNING: Form event AMovieFRM.Activate has a new behavior. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6BA9B8D2-2A32-4B6E-8D36-44949974A5B4"'
 	Private Sub AMovieFRM_Activated(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Activated
-		Dim res As String
+        Dim res As String = "640x480"
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) = 9600 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) = 7200 Then res = "640x480"
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) = 12000 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) = 9000 Then res = "800x600"
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) >= 15360 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) >= 11520 Then res = "1024x768"
@@ -127,7 +127,7 @@ Friend Class AMovieFRM
 	
 	Private Sub AMovieFRM_Load(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Load
 		On Error GoTo 1
-		Dim res As Object
+        Dim res As String = "640x480"
 		ConsoleWrite("PLAYER.init")
 		'UPGRADE_WARNING: Couldn't resolve default property of object res. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) = 9600 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) = 7200 Then res = "640x480"
@@ -172,7 +172,7 @@ Friend Class AMovieFRM
 		Dim Shift As Short = System.Windows.Forms.Control.ModifierKeys \ &H10000
 		Dim X As Single = eventArgs.X
 		Dim Y As Single = eventArgs.Y
-		Dim res As String
+        Dim res As String = "640x480"
 		Back6.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) = 9600 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) = 7200 Then res = "640x480"
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) = 12000 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) = 9000 Then res = "800x600"
@@ -242,7 +242,7 @@ Friend Class AMovieFRM
 		Dim Shift As Short = System.Windows.Forms.Control.ModifierKeys \ &H10000
 		Dim X As Single = VB6.PixelsToTwipsX(eventArgs.X)
 		Dim Y As Single = VB6.PixelsToTwipsY(eventArgs.Y)
-		Dim res As String
+        Dim res As String = "640x480"
 		Back6.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) = 9600 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) = 7200 Then res = "640x480"
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) = 12000 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) = 9000 Then res = "800x600"

@@ -39,11 +39,11 @@ Friend Class TextFRM
 		PrN.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Pix.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		'UPGRADE_ISSUE: Form property TextFRM.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
-		Me.Cursor = vbCustom
+        'Me.Cursor = vbCustom
 		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		'UPGRADE_ISSUE: Form property TextFRM.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
-		
+        'Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
+
 	End Sub
 	
 	Private Sub TextFRM_Load(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Load
@@ -57,7 +57,7 @@ Friend Class TextFRM
 		'mizz = 0
 		'UPGRADE_ISSUE: Constant vbPixels was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
 		'UPGRADE_ISSUE: Form property TextFRM.ScaleMode is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
-		Me.ScaleMode = vbPixels
+        'Me.ScaleMode = vbPixels
 		PrN.Visible = False
 		Me.Icon = Main_Renamed.Icon
 		Select Case DetRes
@@ -114,7 +114,7 @@ Friend Class TextFRM
 			'UPGRADE_WARNING: Couldn't resolve default property of object makx. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 			RichTextBox1.LoadFile("data\text\" & ReadIniFile("ini\main.ini", "Clanky", makx))
 			'UPGRADE_ISSUE: RichTextLib.RichTextBox property RichTextBox1.filename was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-			ConsoleWrite("TEXTVIEWER.introfile=" & RichTextBox1.FileName)
+            'ConsoleWrite("TEXTVIEWER.introfile=" & RichTextBox1.FileName)
 		Else
 			Err.Raise(53)
 		End If
@@ -200,7 +200,7 @@ Friend Class TextFRM
 					ProgressBar1.Value = 0
 			End Select
 			'UPGRADE_ISSUE: RichTextLib.RichTextBox property RichTextBox1.filename was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-			ConsoleWrite("TEXTVIEWER.file=" & RichTextBox1.FileName)
+            'ConsoleWrite("TEXTVIEWER.file=" & RichTextBox1.FileName)
 		Else
 			Err.Raise(53)
 		End If
@@ -224,10 +224,10 @@ Friend Class TextFRM
 		PrN.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Pix.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		'UPGRADE_ISSUE: Form property TextFRM.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
-		Me.Cursor = vbCustom
+        'Me.Cursor = vbCustom
 		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		'UPGRADE_ISSUE: Form property TextFRM.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
+        'Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
 	
@@ -266,10 +266,10 @@ Friend Class TextFRM
 		PrN.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Pix.ForeColor = System.Drawing.ColorTranslator.FromOle(&HC000C0)
 		'UPGRADE_ISSUE: Form property TextFRM.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
-		Me.Cursor = vbCustom
+        'Me.Cursor = vbCustom
 		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		'UPGRADE_ISSUE: Form property TextFRM.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
+        'Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
 	
@@ -309,10 +309,10 @@ Friend Class TextFRM
 		PrN.ForeColor = System.Drawing.ColorTranslator.FromOle(&HC000C0)
 		Pix.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		'UPGRADE_ISSUE: Form property TextFRM.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
-		Me.Cursor = vbCustom
+        'Me.Cursor = vbCustom
 		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		'UPGRADE_ISSUE: Form property TextFRM.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
+        'Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
 	
@@ -331,19 +331,19 @@ Friend Class TextFRM
 		PrN.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Pix.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		'UPGRADE_ISSUE: Form property TextFRM.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
-		Me.Cursor = vbCustom
+        'Me.Cursor = vbCustom
 		'UPGRADE_ISSUE: RichTextLib.RichTextBox property LOGboX.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		'UPGRADE_ISSUE: RichTextLib.RichTextBox property RichTextBox1.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		RichTextBox1.MouseIcon = Console.LOGboX.MouseIcon
+        'RichTextBox1.MouseIcon = Console.LOGboX.MouseIcon
 		
 	End Sub
 	
 	
 	Private Sub Save_Click(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles Save.Click
 		'UPGRADE_ISSUE: RichTextLib.RichTextBox property RichTextBox1.filename was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		FileOpen(1, RichTextBox1.FileName, OpenMode.Output)
-		PrintLine(1, RichTextBox1.RTF)
-		FileClose(1)
+        'FileOpen(1, RichTextBox1.FileName, OpenMode.Output)
+        'PrintLine(1, RichTextBox1.RTF)
+        'FileClose(1)
 	End Sub
 	
 	

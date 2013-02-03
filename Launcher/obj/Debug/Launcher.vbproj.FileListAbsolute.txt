@@ -1,3 +1,9 @@
 C:\Dev\jooky-viewer\master\Launcher\obj\Debug\ResolveAssemblyReference.cache
 C:\Dev\jooky-viewer\master\Launcher\obj\Debug\DiskMagEngineLauncher.LauncherMain.resources
 C:\Dev\jooky-viewer\master\Launcher\obj\Debug\Launcher.vbproj.GenerateResource.Cache
+C:\Dev\jooky-viewer\master\Launcher\bin\DiskMagEngineLauncher.exe
+C:\Dev\jooky-viewer\master\Launcher\bin\DiskMagEngineLauncher.pdb
+C:\Dev\jooky-viewer\master\Launcher\bin\DiskMagEngineLauncher.xml
+C:\Dev\jooky-viewer\master\Launcher\obj\Debug\DiskMagEngineLauncher.exe
+C:\Dev\jooky-viewer\master\Launcher\obj\Debug\DiskMagEngineLauncher.xml
+C:\Dev\jooky-viewer\master\Launcher\obj\Debug\DiskMagEngineLauncher.pdb

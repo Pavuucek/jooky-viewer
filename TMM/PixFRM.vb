@@ -23,10 +23,10 @@ Friend Class PixFRM
 		PrN.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Back.ForeColor = System.Drawing.ColorTranslator.FromOle(&HC000C0)
 		'UPGRADE_ISSUE: Form property PixFRM.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
-		Me.Cursor = vbCustom
+        'Me.Cursor = vbCustom
 		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		'UPGRADE_ISSUE: Form property PixFRM.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
+        'Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
 	
@@ -73,16 +73,16 @@ Friend Class PixFRM
 		Dim X As Single = VB6.PixelsToTwipsX(eventArgs.X)
 		Dim Y As Single = VB6.PixelsToTwipsY(eventArgs.Y)
 		'UPGRADE_ISSUE: Form property PixFRM.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
-		Me.Cursor = vbCustom
+        'Me.Cursor = vbCustom
 		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		'UPGRADE_ISSUE: Form property PixFRM.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
+        'Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
 	
 	'UPGRADE_WARNING: Form event PixFRM.Activate has a new behavior. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6BA9B8D2-2A32-4B6E-8D36-44949974A5B4"'
 	Private Sub PixFRM_Activated(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Activated
-		Dim res As String
+        Dim res As String = "640x480"
 		Image1.Top = VB6.TwipsToPixelsY(VB6.PixelsToTwipsY(Back.Top) + 2)
 		Image1.Left = 0
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) = 9600 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) = 7200 Then res = "640x480"
@@ -90,7 +90,7 @@ Friend Class PixFRM
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) >= 15360 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) >= 11520 Then res = "1024x768"
 		'UPGRADE_ISSUE: Constant vbPixels was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
 		'UPGRADE_ISSUE: Form property PixFRM.ScaleMode is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
-		Me.ScaleMode = vbPixels
+        'Me.ScaleMode = vbPixels
 		Select Case res
 			Case "640x480"
 				Image1.Width = VB6.TwipsToPixelsX(640)
@@ -108,7 +108,7 @@ Friend Class PixFRM
 	End Sub
 	
 	Private Sub PixFRM_Load(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Load
-		Dim res As String
+        Dim res As String = "640x480"
 		On Error GoTo 1
 		Me.Icon = Main_Renamed.Icon
 		ConsoleWrite("PIXVIEWER.init")
@@ -120,7 +120,7 @@ Friend Class PixFRM
 		If VB6.PixelsToTwipsX(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Width) >= 15360 And VB6.PixelsToTwipsY(System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height) >= 11520 Then res = "1024x768"
 		'UPGRADE_ISSUE: Constant vbPixels was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
 		'UPGRADE_ISSUE: Form property PixFRM.ScaleMode is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
-		Me.ScaleMode = vbPixels
+        'Me.ScaleMode = vbPixels
 		Select Case res
 			Case "640x480"
 				Image1.Width = VB6.TwipsToPixelsX(640)
@@ -200,7 +200,7 @@ Friend Class PixFRM
 		Dim Printer As New Printer
 		PlaySound(11)
 		'UPGRADE_WARNING: Couldn't resolve default property of object Me.Picture.filename. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
-		ConsoleWrite("DEVICEUSE.printer=" & Me.BackgroundImage.filename)
+        'ConsoleWrite("DEVICEUSE.printer=" & Me.BackgroundImage.filename)
 		File1.Visible = False
 		PrN.Visible = False
 		Back.Visible = False
