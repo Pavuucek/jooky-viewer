@@ -6,7 +6,7 @@ Begin VB.Form LauncherMain
    ClientTop       =   2925
    ClientWidth     =   5640
    ControlBox      =   0   'False
-   Height          =   3240
+   Height          =   3345
    Icon            =   "LauncherMain.frx":0000
    Left            =   2115
    LinkTopic       =   "Form1"
@@ -15,7 +15,7 @@ Begin VB.Form LauncherMain
    ScaleHeight     =   2835
    ScaleWidth      =   5640
    ShowInTaskbar   =   0   'False
-   Top             =   2580
+   Top             =   2475
    Width           =   5760
    Begin VB.CommandButton Command1 
       Caption         =   "Vytvoøit zástupce"

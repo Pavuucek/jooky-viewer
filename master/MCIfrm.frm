@@ -9,7 +9,7 @@ Begin VB.Form MCIfrm
    ClientWidth     =   7560
    ClipControls    =   0   'False
    ControlBox      =   0   'False
-   Height          =   4080
+   Height          =   4185
    Icon            =   "MCIfrm.frx":0000
    Left            =   705
    LinkTopic       =   "Form1"
@@ -18,7 +18,7 @@ Begin VB.Form MCIfrm
    NegotiateMenus  =   0   'False
    ScaleHeight     =   3675
    ScaleWidth      =   7560
-   Top             =   1365
+   Top             =   1260
    Width           =   7680
    Begin VB.FileListBox File1 
       BackColor       =   &H00000000&
@@ -36,11 +36,11 @@ Begin VB.Form MCIfrm
       TabIndex        =   5
       Top             =   2400
       Width           =   7335
-      _Version        =   65536
       _ExtentX        =   12938
       _ExtentY        =   1931
-      _StockProps     =   32
-      BorderStyle     =   1
+      _Version        =   393216
+      DeviceType      =   ""
+      FileName        =   ""
    End
    Begin VB.Label Label1 
       BackColor       =   &H00FF0000&
@@ -307,11 +307,11 @@ End Sub
 
 Private Sub SldWave_Change()
 ConsoleWrite "PLAYER.ChangeWaveVolume=" & SldWave.Value
-wavehlas = waveOutSetVolume(2, 65000 - (6500 * SldWave.Value))
+'wavehlas = waveOutSetVolume(2, 65000 - (6500 * SldWave.Value))
 End Sub
 
 Private Sub Slider1_Change()
 ConsoleWrite "PLAYER.ChangeMidiVolume=" & Slider1.Value
-hlas = midiOutSetVolume(2, 65000 - (Slider1.Value * 6500))
+'hlas = midiOutSetVolume(2, 65000 - (Slider1.Value * 6500))
 End Sub
 
