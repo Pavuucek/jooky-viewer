@@ -1,4 +1,5 @@
-VERSION 4.00
+VERSION 5.00
+Object = "{6B7E6392-850A-101B-AFC0-4210102A8DA7}#1.3#0"; "COMCTL32.OCX"
 Begin VB.Form frmSplash 
    BorderStyle     =   3  'Fixed Dialog
    ClientHeight    =   4320
@@ -6,21 +7,18 @@ Begin VB.Form frmSplash
    ClientTop       =   1410
    ClientWidth     =   7650
    ControlBox      =   0   'False
-   Height          =   4830
    Icon            =   "frmSplash.frx":0000
    KeyPreview      =   -1  'True
-   Left            =   195
    LinkTopic       =   "Form2"
    MaxButton       =   0   'False
    MinButton       =   0   'False
    MouseIcon       =   "frmSplash.frx":000C
    MousePointer    =   99  'Custom
+   PaletteMode     =   1  'UseZOrder
    ScaleHeight     =   288
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   510
    ShowInTaskbar   =   0   'False
-   Top             =   960
-   Width           =   7770
    Begin VB.Frame Frame1 
       Height          =   4050
       Left            =   120
@@ -39,7 +37,7 @@ Begin VB.Form frmSplash
       Begin VB.Label Label3 
          AutoSize        =   -1  'True
          Caption         =   "Jooky - Viewer"
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         BeginProperty Font 
             Name            =   "MS Sans Serif"
             Size            =   9.75
             Charset         =   238
@@ -80,7 +78,7 @@ Begin VB.Form frmSplash
       Begin VB.Label Label1 
          AutoSize        =   -1  'True
          Caption         =   "PROGRAMMER:"
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         BeginProperty Font 
             Name            =   "MS Sans Serif"
             Size            =   8.25
             Charset         =   238
@@ -129,7 +127,7 @@ Begin VB.Form frmSplash
       Begin VB.Label LblCredits 
          AutoSize        =   -1  'True
          Caption         =   "CREDITS:"
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         BeginProperty Font 
             Name            =   "MS Sans Serif"
             Size            =   8.25
             Charset         =   238
@@ -149,7 +147,7 @@ Begin VB.Form frmSplash
          Alignment       =   2  'Center
          AutoSize        =   -1  'True
          Caption         =   "Formating Hard Drive ..."
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         BeginProperty Font 
             Name            =   "Arial"
             Size            =   21.75
             Charset         =   238
@@ -177,7 +175,7 @@ Begin VB.Form frmSplash
       Begin VB.Label lblCopyright 
          AutoSize        =   -1  'True
          Caption         =   "Václav ""DarkLogic"" Návrat"
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         BeginProperty Font 
             Name            =   "Arial"
             Size            =   8.25
             Charset         =   0
@@ -196,7 +194,7 @@ Begin VB.Form frmSplash
       Begin VB.Label lblCompany 
          AutoSize        =   -1  'True
          Caption         =   "© Harley Software  Ltd. 1997 - 1999"
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         BeginProperty Font 
             Name            =   "Arial"
             Size            =   8.25
             Charset         =   0
@@ -216,7 +214,7 @@ Begin VB.Form frmSplash
          Alignment       =   1  'Right Justify
          AutoSize        =   -1  'True
          Caption         =   "verze 1.0"
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         BeginProperty Font 
             Name            =   "Arial"
             Size            =   12
             Charset         =   0
@@ -237,7 +235,7 @@ Begin VB.Form frmSplash
          Alignment       =   1  'Right Justify
          AutoSize        =   -1  'True
          Caption         =   "for Windows 98, 95 nebo NT 4.0"
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         BeginProperty Font 
             Name            =   "Arial"
             Size            =   15.75
             Charset         =   0
@@ -256,7 +254,7 @@ Begin VB.Form frmSplash
       Begin VB.Label lblProductName 
          AutoSize        =   -1  'True
          Caption         =   "DiskMag ENGINE"
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         BeginProperty Font 
             Name            =   "Arial"
             Size            =   32.25
             Charset         =   0
@@ -290,7 +288,7 @@ Begin VB.Form frmSplash
    Begin VB.Label StatCon 
       AutoSize        =   -1  'True
       Caption         =   "@@@"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
          Charset         =   238
@@ -307,7 +305,9 @@ Begin VB.Form frmSplash
    End
 End
 Attribute VB_Name = "frmSplash"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 

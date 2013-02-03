@@ -1,4 +1,4 @@
-VERSION 4.00
+VERSION 5.00
 Begin VB.Form WaitFRM 
    BorderStyle     =   3  'Fixed Dialog
    ClientHeight    =   765
@@ -6,24 +6,21 @@ Begin VB.Form WaitFRM
    ClientTop       =   2340
    ClientWidth     =   4800
    ControlBox      =   0   'False
-   Height          =   1275
-   Left            =   525
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
    MousePointer    =   99  'Custom
+   PaletteMode     =   1  'UseZOrder
    ScaleHeight     =   765
    ScaleWidth      =   4800
    ShowInTaskbar   =   0   'False
-   Top             =   1890
-   Width           =   4920
    Begin VB.Label stav 
       Alignment       =   2  'Center
       AutoSize        =   -1  'True
       BackColor       =   &H00000000&
       BorderStyle     =   1  'Fixed Single
       Caption         =   "Loading, please wait ..."
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   21.75
          Charset         =   238
@@ -42,7 +39,9 @@ Begin VB.Form WaitFRM
    End
 End
 Attribute VB_Name = "WaitFRM"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
 Option Explicit

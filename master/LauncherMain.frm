@@ -1,4 +1,4 @@
-VERSION 4.00
+VERSION 5.00
 Begin VB.Form LauncherMain 
    BorderStyle     =   3  'Fixed Dialog
    ClientHeight    =   2835
@@ -6,17 +6,14 @@ Begin VB.Form LauncherMain
    ClientTop       =   2925
    ClientWidth     =   5640
    ControlBox      =   0   'False
-   Height          =   3345
    Icon            =   "LauncherMain.frx":0000
-   Left            =   2115
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
+   PaletteMode     =   1  'UseZOrder
    ScaleHeight     =   2835
    ScaleWidth      =   5640
    ShowInTaskbar   =   0   'False
-   Top             =   2475
-   Width           =   5760
    Begin VB.CommandButton Command1 
       Caption         =   "Vytvoøit zástupce"
       Height          =   375
@@ -53,7 +50,7 @@ Begin VB.Form LauncherMain
    Begin VB.Label Label1 
       AutoSize        =   -1  'True
       Caption         =   "DiskMag ENGINE Launcher"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Comic Sans MS"
          Size            =   20.25
          Charset         =   0
@@ -71,7 +68,9 @@ Begin VB.Form LauncherMain
    End
 End
 Attribute VB_Name = "LauncherMain"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 Private Sub Close_Click()

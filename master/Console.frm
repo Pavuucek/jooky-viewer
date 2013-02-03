@@ -1,4 +1,5 @@
-VERSION 4.00
+VERSION 5.00
+Object = "{3B7C8863-D78F-101B-B9B5-04021C009402}#1.2#0"; "RICHTX32.OCX"
 Begin VB.Form Console 
    BackColor       =   &H00FF0000&
    BorderStyle     =   1  'Fixed Single
@@ -8,16 +9,13 @@ Begin VB.Form Console
    ClientTop       =   1845
    ClientWidth     =   6675
    ClipControls    =   0   'False
-   Height          =   4635
    Icon            =   "Console.frx":0000
-   Left            =   1440
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    NegotiateMenus  =   0   'False
+   PaletteMode     =   1  'UseZOrder
    ScaleHeight     =   4125
    ScaleWidth      =   6675
-   Top             =   1395
-   Width           =   6795
    WindowState     =   1  'Minimized
    Begin VB.TextBox Text1 
       BackColor       =   &H00000000&
@@ -27,6 +25,32 @@ Begin VB.Form Console
       Text            =   "Text1"
       Top             =   600
       Width           =   6495
+   End
+   Begin RichTextLib.RichTextBox LOGboX 
+      Height          =   3015
+      Left            =   120
+      TabIndex        =   1
+      Top             =   960
+      Width           =   6495
+      _ExtentX        =   11456
+      _ExtentY        =   5318
+      _Version        =   393217
+      BackColor       =   0
+      Enabled         =   -1  'True
+      ReadOnly        =   -1  'True
+      ScrollBars      =   2
+      MousePointer    =   99
+      TextRTF         =   $"Console.frx":000C
+      MouseIcon       =   "Console.frx":0090
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   238
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
    End
    Begin VB.Label Label1 
       AutoSize        =   -1  'True
@@ -42,38 +66,16 @@ Begin VB.Form Console
    Begin VB.Image imbPozadi 
       Height          =   375
       Left            =   0
-      Picture         =   "Console.frx":000C
+      Picture         =   "Console.frx":03AA
       Stretch         =   -1  'True
       Top             =   0
       Width           =   1095
    End
-   Begin RichTextLib.RichTextBox LOGboX 
-      Height          =   3015
-      Left            =   120
-      TabIndex        =   1
-      Top             =   960
-      Width           =   6495
-      _ExtentX        =   11456
-      _ExtentY        =   5318
-      _Version        =   393217
-      BackColor       =   0
-      ReadOnly        =   -1  'True
-      ScrollBars      =   2
-      MousePointer    =   99
-      MouseIcon       =   "Console.frx":6F44
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
-         Charset         =   238
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-   End
 End
 Attribute VB_Name = "Console"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 Private Sub Form_Load()

@@ -1,4 +1,6 @@
-VERSION 4.00
+VERSION 5.00
+Object = "{3B7C8863-D78F-101B-B9B5-04021C009402}#1.2#0"; "RICHTX32.OCX"
+Object = "{6B7E6392-850A-101B-AFC0-4210102A8DA7}#1.3#0"; "COMCTL32.OCX"
 Begin VB.Form TextFRM 
    AutoRedraw      =   -1  'True
    BackColor       =   &H00FF0000&
@@ -9,22 +11,19 @@ Begin VB.Form TextFRM
    ClientTop       =   1860
    ClientWidth     =   6690
    ControlBox      =   0   'False
-   Height          =   4635
-   Left            =   1395
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
    NegotiateMenus  =   0   'False
+   PaletteMode     =   1  'UseZOrder
    ScaleHeight     =   275
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   446
    ShowInTaskbar   =   0   'False
-   Top             =   1410
-   Width           =   6810
    WindowState     =   2  'Maximized
    Begin VB.ListBox List1 
       BackColor       =   &H00000000&
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   9.75
          Charset         =   238
@@ -70,12 +69,14 @@ Begin VB.Form TextFRM
       _Version        =   393217
       BackColor       =   16777215
       BorderStyle     =   0
+      Enabled         =   -1  'True
       HideSelection   =   0   'False
       ReadOnly        =   -1  'True
       ScrollBars      =   3
       MousePointer    =   99
       RightMargin     =   800
-      MouseIcon       =   "Txtfrm.frx":0000
+      TextRTF         =   $"Txtfrm.frx":0000
+      MouseIcon       =   "Txtfrm.frx":0086
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "MS Sans Serif"
          Size            =   9.75
@@ -91,7 +92,7 @@ Begin VB.Form TextFRM
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Obrázky"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -112,7 +113,7 @@ Begin VB.Form TextFRM
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Nový èl."
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -133,7 +134,7 @@ Begin VB.Form TextFRM
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "<<< &Zpìt"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -154,7 +155,7 @@ Begin VB.Form TextFRM
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "Mìøiè Hodnocení"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   9.75
          Charset         =   238
@@ -174,7 +175,7 @@ Begin VB.Form TextFRM
       AutoSize        =   -1  'True
       BackStyle       =   0  'Transparent
       Caption         =   "#"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -198,7 +199,9 @@ Begin VB.Form TextFRM
    End
 End
 Attribute VB_Name = "TextFRM"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 Private Sub Back4_Click()
@@ -240,7 +243,7 @@ Dim em, makx, uhc, mohc As String
 On Error GoTo 1
 DrawBckGround Me, "TextViewer", True
 em = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="EditMode")
-progressbar1.Value = 0
+ProgressBar1.Value = 0
 'mizz = 0
 Me.ScaleMode = vbPixels
 PrN.Visible = False
@@ -269,8 +272,8 @@ Back4.Left = List1.Left + List1.Width + 181
 Back4.Top = List1.Top
 PrN.Top = List1.Top
 Pix.Top = List1.Top
-progressbar1.Left = Pix.Left
-progressbar1.Top = Pix.Top + 24
+ProgressBar1.Left = Pix.Left
+ProgressBar1.Top = Pix.Top + 24
 Verdiktomer.Left = Pix.Left
 Verdiktomer.Top = Pix.Top + 64
 makx = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="Window")
@@ -360,9 +363,9 @@ If FileExists("data\text\" & ReadIniFile("ini\main.ini", makz & List1.ListIndex 
   RichTextBox1.filename = "data\text\" & ReadIniFile("ini\main.ini", makz & List1.ListIndex + 1, "File")
   Select Case ReadIniFile("ini\main.ini", makz & List1.ListIndex + 1, "Verdikt")
   Case 0 To 11
-    progressbar1.Value = ReadIniFile("ini\main.ini", makz & List1.ListIndex + 1, "Verdikt")
+    ProgressBar1.Value = ReadIniFile("ini\main.ini", makz & List1.ListIndex + 1, "Verdikt")
   Case Else
-    progressbar1.Value = 0
+    ProgressBar1.Value = 0
   End Select
   ConsoleWrite "TEXTVIEWER.file=" & RichTextBox1.filename
 Else

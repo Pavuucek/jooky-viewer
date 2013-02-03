@@ -1,4 +1,4 @@
-VERSION 4.00
+VERSION 5.00
 Begin VB.Form PRGinF 
    BackColor       =   &H00FF0000&
    BorderStyle     =   1  'Fixed Single
@@ -9,16 +9,13 @@ Begin VB.Form PRGinF
    ClientWidth     =   4830
    ClipControls    =   0   'False
    ControlBox      =   0   'False
-   Height          =   5490
-   Left            =   2280
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
    NegotiateMenus  =   0   'False
+   PaletteMode     =   1  'UseZOrder
    ScaleHeight     =   4980
    ScaleWidth      =   4830
-   Top             =   1815
-   Width           =   4950
    Begin VB.Image Image1 
       Height          =   2535
       Left            =   120
@@ -30,7 +27,7 @@ Begin VB.Form PRGinF
       AutoSize        =   -1  'True
       BackColor       =   &H00FF0000&
       Caption         =   "&Zavøít"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -50,7 +47,7 @@ Begin VB.Form PRGinF
       AutoSize        =   -1  'True
       BackColor       =   &H00FF0000&
       Caption         =   "Toto je verze pro WINDOWS 95/98"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   9.75
          Charset         =   238
@@ -70,7 +67,7 @@ Begin VB.Form PRGinF
       AutoSize        =   -1  'True
       BackColor       =   &H00FF0000&
       Caption         =   "e-mail     : MKuncl@POST.CZ"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   9.75
          Charset         =   238
@@ -90,7 +87,7 @@ Begin VB.Form PRGinF
       AutoSize        =   -1  'True
       BackColor       =   &H00FF0000&
       Caption         =   "Adresa   : Smetanova 448, Votice 259 01"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   9.75
          Charset         =   238
@@ -110,7 +107,7 @@ Begin VB.Form PRGinF
       AutoSize        =   -1  'True
       BackColor       =   &H00FF0000&
       Caption         =   "Firma      : Harley Software ltd."
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   9.75
          Charset         =   238
@@ -130,7 +127,7 @@ Begin VB.Form PRGinF
       AutoSize        =   -1  'True
       BackColor       =   &H00FF0000&
       Caption         =   "Autor       : Michal Kuncl"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   9.75
          Charset         =   238
@@ -150,7 +147,7 @@ Begin VB.Form PRGinF
       AutoSize        =   -1  'True
       BackColor       =   &H00FF0000&
       Caption         =   "Program : Jooky-Viewer - DiskMag ENGINE"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   9.75
          Charset         =   238
@@ -168,7 +165,9 @@ Begin VB.Form PRGinF
    End
 End
 Attribute VB_Name = "PRGinF"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
 Option Explicit

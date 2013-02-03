@@ -1,4 +1,5 @@
-VERSION 4.00
+VERSION 5.00
+Object = "{3B7C8863-D78F-101B-B9B5-04021C009402}#1.2#0"; "RICHTX32.OCX"
 Begin VB.Form Help 
    BackColor       =   &H00FF0000&
    BorderStyle     =   0  'None
@@ -8,18 +9,15 @@ Begin VB.Form Help
    ClientTop       =   1515
    ClientWidth     =   6690
    ClipControls    =   0   'False
-   Height          =   4650
-   Left            =   1080
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
    NegotiateMenus  =   0   'False
+   PaletteMode     =   1  'UseZOrder
    ScaleHeight     =   276
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   446
    ShowInTaskbar   =   0   'False
-   Top             =   1065
-   Width           =   6810
    WindowState     =   2  'Maximized
    Begin RichTextLib.RichTextBox RichTextBox1 
       Height          =   5895
@@ -31,7 +29,6 @@ Begin VB.Form Help
       _ExtentY        =   10398
       _Version        =   393217
       BackColor       =   16777215
-      Enabled         =   -1  'True
       HideSelection   =   0   'False
       ReadOnly        =   -1  'True
       ScrollBars      =   2
@@ -53,7 +50,7 @@ Begin VB.Form Help
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "<<< Zpìt"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -74,7 +71,7 @@ Begin VB.Form Help
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "Informace o programu"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -95,7 +92,7 @@ Begin VB.Form Help
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "!@"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -119,7 +116,9 @@ Begin VB.Form Help
    End
 End
 Attribute VB_Name = "Help"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 Private Sub Back4_Click()

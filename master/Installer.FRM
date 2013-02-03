@@ -1,4 +1,5 @@
-VERSION 4.00
+VERSION 5.00
+Object = "{3B7C8863-D78F-101B-B9B5-04021C009402}#1.2#0"; "RICHTX32.OCX"
 Begin VB.Form Installer 
    BackColor       =   &H00FF0000&
    BorderStyle     =   1  'Fixed Single
@@ -8,7 +9,7 @@ Begin VB.Form Installer
    ClientTop       =   2280
    ClientWidth     =   7200
    ClipControls    =   0   'False
-   BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+   BeginProperty Font 
       Name            =   "MS Sans Serif"
       Size            =   8.25
       Charset         =   238
@@ -17,21 +18,18 @@ Begin VB.Form Installer
       Italic          =   0   'False
       Strikethrough   =   0   'False
    EndProperty
-   Height          =   3690
    Icon            =   "Installer.frx":0000
    KeyPreview      =   -1  'True
-   Left            =   0
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
+   PaletteMode     =   1  'UseZOrder
    ScaleHeight     =   212
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   480
-   Top             =   1830
-   Width           =   7320
    Begin VB.FileListBox File1 
       BackColor       =   &H00000000&
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   9.75
          Charset         =   238
@@ -41,19 +39,42 @@ Begin VB.Form Installer
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H00FFFFFF&
-      Height          =   2460
+      Height          =   2250
       Left            =   4680
       Pattern         =   "*.ZXC"
       TabIndex        =   0
       Top             =   120
       Width           =   2415
    End
+   Begin RichTextLib.RichTextBox RichTextBox1 
+      Height          =   2895
+      Left            =   120
+      TabIndex        =   1
+      Top             =   120
+      Width           =   4455
+      _ExtentX        =   7858
+      _ExtentY        =   5106
+      _Version        =   393217
+      BackColor       =   16777215
+      ReadOnly        =   -1  'True
+      ScrollBars      =   3
+      TextRTF         =   $"Installer.frx":0442
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   9.75
+         Charset         =   238
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
    Begin VB.Label cmdOk 
       AutoSize        =   -1  'True
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "I&nstalovat"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -74,7 +95,7 @@ Begin VB.Form Installer
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Zavøít"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -96,32 +117,11 @@ Begin VB.Form Installer
       Top             =   0
       Width           =   8175
    End
-   Begin RichTextLib.RichTextBox RichTextBox1 
-      Height          =   2895
-      Left            =   120
-      TabIndex        =   1
-      Top             =   120
-      Width           =   4455
-      _ExtentX        =   7858
-      _ExtentY        =   5106
-      _Version        =   393217
-      BackColor       =   16777215
-      Enabled         =   -1  'True
-      ReadOnly        =   -1  'True
-      ScrollBars      =   3
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   9.75
-         Charset         =   238
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-   End
 End
 Attribute VB_Name = "Installer"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 
@@ -146,7 +146,7 @@ Private Sub drvDrives_Change()
 End Sub
 
 Private Sub cmdCancel_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-cmdOK.ForeColor = &HFFFF&
+cmdOk.ForeColor = &HFFFF&
 cmdCancel.ForeColor = &HC000C0
 Me.MousePointer = 99
 Me.MouseIcon = Main.XitBTN.MouseIcon
@@ -171,7 +171,7 @@ GoTo 2
 End Sub
 
 Private Sub cmdOK_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-cmdOK.ForeColor = &HC000C0
+cmdOk.ForeColor = &HC000C0
 cmdCancel.ForeColor = &HFFFF&
 Me.MousePointer = 99
 Me.MouseIcon = Main.XitBTN.MouseIcon
@@ -183,7 +183,7 @@ Private Sub dir1_Change()
 End Sub
 
 Private Sub dir1_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-cmdOK.ForeColor = &HFFFF&
+cmdOk.ForeColor = &HFFFF&
 cmdCancel.ForeColor = &HFFFF&
 
 End Sub
@@ -199,7 +199,7 @@ RichTextBox1.filename = ReadIniFile("ini\main.ini", "Files", File1.filename)
 End Sub
 
 Private Sub File1_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-cmdOK.ForeColor = &HFFFF&
+cmdOk.ForeColor = &HFFFF&
 cmdCancel.ForeColor = &HFFFF&
 Me.MousePointer = 99
 Me.MouseIcon = Main.XitBTN.MouseIcon
@@ -247,14 +247,14 @@ End Sub
 
 
 Private Sub Form_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-cmdOK.ForeColor = &HFFFF&
+cmdOk.ForeColor = &HFFFF&
 cmdCancel.ForeColor = &HFFFF&
 Me.MousePointer = vbDefault
 End Sub
 
 
 Private Sub Label1_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-cmdOK.ForeColor = &HFFFF&
+cmdOk.ForeColor = &HFFFF&
 cmdCancel.ForeColor = &HFFFF&
 
 End Sub
@@ -265,7 +265,7 @@ Private Sub Image1_Click()
 End Sub
 
 Private Sub imgbackground_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-cmdOK.ForeColor = &HFFFF&
+cmdOk.ForeColor = &HFFFF&
 cmdCancel.ForeColor = &HFFFF&
 Me.MousePointer = vbDefault
 
@@ -273,7 +273,7 @@ End Sub
 
 
 Private Sub RichTextBox1_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-cmdOK.ForeColor = &HFFFF&
+cmdOk.ForeColor = &HFFFF&
 cmdCancel.ForeColor = &HFFFF&
 Me.MousePointer = 99
 Me.MouseIcon = Console.LOGboX.MouseIcon

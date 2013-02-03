@@ -1,4 +1,5 @@
-VERSION 4.00
+VERSION 5.00
+Object = "{05589FA0-C356-11CE-BF01-00AA0055595A}#2.0#0"; "AMOVIE.OCX"
 Begin VB.Form AMovieFRM 
    BackColor       =   &H00FF0000&
    BorderStyle     =   0  'None
@@ -9,23 +10,20 @@ Begin VB.Form AMovieFRM
    ClientWidth     =   6690
    ClipControls    =   0   'False
    ControlBox      =   0   'False
-   Height          =   4560
-   Left            =   1080
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
    NegotiateMenus  =   0   'False
+   PaletteMode     =   1  'UseZOrder
    ScaleHeight     =   270
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   446
    ShowInTaskbar   =   0   'False
-   Top             =   1185
-   Width           =   6810
    WindowState     =   2  'Maximized
    Begin VB.FileListBox File1 
       BackColor       =   &H00000000&
       ForeColor       =   &H00FFFFFF&
-      Height          =   1230
+      Height          =   1065
       Left            =   120
       Pattern         =   "*.mid"
       TabIndex        =   0
@@ -52,7 +50,7 @@ Begin VB.Form AMovieFRM
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "<<< &Zpìt"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -73,7 +71,7 @@ Begin VB.Form AMovieFRM
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "Pøehrávaè"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -97,7 +95,9 @@ Begin VB.Form AMovieFRM
    End
 End
 Attribute VB_Name = "AMovieFRM"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 Private Sub ActiveXPlugin1_GotFocus()

@@ -1,4 +1,4 @@
-VERSION 4.00
+VERSION 5.00
 Begin VB.Form PCGames 
    BackColor       =   &H00FF0000&
    BorderStyle     =   4  'Fixed ToolWindow
@@ -9,23 +9,20 @@ Begin VB.Form PCGames
    ClientWidth     =   1725
    ClipControls    =   0   'False
    ForeColor       =   &H00FF0000&
-   Height          =   3075
-   Left            =   2400
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
    NegotiateMenus  =   0   'False
+   PaletteMode     =   1  'UseZOrder
    ScaleHeight     =   2565
    ScaleWidth      =   1725
    ShowInTaskbar   =   0   'False
-   Top             =   2235
-   Width           =   1845
    Begin VB.Label Rec 
       AutoSize        =   -1  'True
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Recenze"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -46,7 +43,7 @@ Begin VB.Form PCGames
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "N&ovinky"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -67,7 +64,7 @@ Begin VB.Form PCGames
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Návody"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -88,7 +85,7 @@ Begin VB.Form PCGames
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Cheaty"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -109,7 +106,7 @@ Begin VB.Form PCGames
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "<<< &Zpìt"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -133,7 +130,9 @@ Begin VB.Form PCGames
    End
 End
 Attribute VB_Name = "PCGames"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 Private Sub Back3_Click()

@@ -1,4 +1,4 @@
-VERSION 4.00
+VERSION 5.00
 Begin VB.Form List 
    BackColor       =   &H00FF0000&
    BorderStyle     =   4  'Fixed ToolWindow
@@ -9,25 +9,22 @@ Begin VB.Form List
    ClientWidth     =   5535
    ClipControls    =   0   'False
    ForeColor       =   &H00FF00FF&
-   Height          =   4830
    Icon            =   "List.frx":0000
-   Left            =   1830
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
    NegotiateMenus  =   0   'False
+   PaletteMode     =   1  'UseZOrder
    ScaleHeight     =   288
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   369
    ShowInTaskbar   =   0   'False
-   Top             =   555
-   Width           =   5655
    Begin VB.Label Uvodnik 
       AutoSize        =   -1  'True
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "Ú&vodník"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -48,7 +45,7 @@ Begin VB.Form List
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&PC Games"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -69,7 +66,7 @@ Begin VB.Form List
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Software"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -90,7 +87,7 @@ Begin VB.Form List
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Redakce"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -112,7 +109,7 @@ Begin VB.Form List
       BackStyle       =   0  'Transparent
       Caption         =   "Obsah CD"
       Enabled         =   0   'False
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -133,7 +130,7 @@ Begin VB.Form List
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Anketa"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -154,7 +151,7 @@ Begin VB.Form List
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "Pøipojit se k &WWW"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -175,7 +172,7 @@ Begin VB.Form List
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Dopisy"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -196,7 +193,7 @@ Begin VB.Form List
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "Pohled do &Budoucna"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -217,7 +214,7 @@ Begin VB.Form List
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Filmy + TV"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -238,7 +235,7 @@ Begin VB.Form List
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Výuka"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -259,7 +256,7 @@ Begin VB.Form List
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Muzika"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -280,7 +277,7 @@ Begin VB.Form List
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Inzerce"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -301,7 +298,7 @@ Begin VB.Form List
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "Rùz&né"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -322,7 +319,7 @@ Begin VB.Form List
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Literatùra"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -343,7 +340,7 @@ Begin VB.Form List
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "<<< &Zpìt"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -367,7 +364,9 @@ Begin VB.Form List
    End
 End
 Attribute VB_Name = "List"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 Private Sub MoveFocus(ByVal bTn As Label, ByVal iMg As Image)

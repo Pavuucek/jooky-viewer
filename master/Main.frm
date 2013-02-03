@@ -1,4 +1,4 @@
-VERSION 4.00
+VERSION 5.00
 Begin VB.Form Main 
    AutoRedraw      =   -1  'True
    BackColor       =   &H00FF0000&
@@ -8,18 +8,15 @@ Begin VB.Form Main
    ClientLeft      =   1170
    ClientTop       =   2295
    ClientWidth     =   9480
-   Height          =   4080
    Icon            =   "Main.frx":0000
-   Left            =   1110
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
+   PaletteMode     =   1  'UseZOrder
    ScaleHeight     =   238
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   632
    ShowInTaskbar   =   0   'False
-   Top             =   1845
-   Width           =   9600
    WindowState     =   2  'Maximized
    Begin VB.CommandButton Secret 
       Height          =   195
@@ -49,7 +46,7 @@ Begin VB.Form Main
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Obsah tohoto ËÌsla"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   14.25
          Charset         =   238
@@ -70,7 +67,7 @@ Begin VB.Form Main
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&N·povÏda"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   14.25
          Charset         =   238
@@ -91,7 +88,7 @@ Begin VB.Form Main
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "Ovl·da&cÌ Panel"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   14.25
          Charset         =   238
@@ -112,7 +109,7 @@ Begin VB.Form Main
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Instalace program˘"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   14.25
          Charset         =   238
@@ -133,7 +130,7 @@ Begin VB.Form Main
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&P¯ehr·vaË"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   14.25
          Charset         =   238
@@ -163,7 +160,7 @@ Begin VB.Form Main
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "Numero"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   14.25
          Charset         =   238
@@ -184,7 +181,7 @@ Begin VB.Form Main
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "U$er"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   12
          Charset         =   238
@@ -208,7 +205,9 @@ Begin VB.Form Main
    End
 End
 Attribute VB_Name = "Main"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 Private Sub Command1_Click()
@@ -266,7 +265,7 @@ Dim XtrA
 Dim User
 Dim VaLuEE As Integer
 Dim SuP As String
-frmSplash.progressbar1.Value = 0
+frmSplash.ProgressBar1.Value = 0
 Select Case LCase(Command)
   Case "-shortcut"
     SuP = "shortcut"
@@ -315,13 +314,13 @@ Select Case GetSystemMetrics(SM_CLEANBOOT)
      Case Else
        Statu$ = "ok"
 End Select
-frmSplash.progressbar1.Value = frmSplash.progressbar1.Value + 1
+frmSplash.ProgressBar1.Value = frmSplash.ProgressBar1.Value + 1
 'Otestujeme, jestli uzivatel nepousti program dvakrat
 If App.PrevInstance = True Then
   MsgBox Title:="JOOKY-VIEWER - DiskMag ENGINE", prompt:="Program je uû jednou spuötÏn. Zm·Ëni OK a program se zav¯e", Buttons:=vbExclamation
   End
 End If
-frmSplash.progressbar1.Value = frmSplash.progressbar1.Value + 1
+frmSplash.ProgressBar1.Value = frmSplash.ProgressBar1.Value + 1
 Usr.Visible = False
 VaLuEE = False
 If XtrA = "1" Then
@@ -330,12 +329,12 @@ If XtrA = "1" Then
   VaLuEE = True
 End If
 PlaySound 12
-frmSplash.progressbar1.Value = frmSplash.progressbar1.Value + 1
+frmSplash.ProgressBar1.Value = frmSplash.ProgressBar1.Value + 1
 Me.Icon = Main.Icon
 numero = ReadIniFile("ini\main.ini", "Common", "Cislo")
 Main.Height = Screen.Height
 Main.Width = Screen.Width
-frmSplash.progressbar1.Value = frmSplash.progressbar1.Value + 1
+frmSplash.ProgressBar1.Value = frmSplash.ProgressBar1.Value + 1
 'autodetect rozliseni
 Select Case DetRes
 Case "640x480"
@@ -357,22 +356,22 @@ Case "less"
   MsgBox Title:="Jooky-Viewer - ERROR !!!", prompt:="M·te nastavenÈ moc malÈ rozliöenÌ plochy, nastavte si rozliöenÌ na jedno z tÏchto : 640x480, 800x600, 1024x768 a spusùte program znovu !!!!", Buttons:=vbExclamation
   End
 End Select
-frmSplash.progressbar1.Value = frmSplash.progressbar1.Value + 1
+frmSplash.ProgressBar1.Value = frmSplash.ProgressBar1.Value + 1
 imgtitle.Width = Image1.Width
 'Image1.Height = Image1.Height + imgtitle.Height
 If ReadIniFile("ini\graphics.ini", "SystemBitmaps", "Title") <> "" And FileExists("data\pictures\" & ReadIniFile("ini\graphics.ini", "SystemBitmaps", "Title")) Then
   Image1.Picture = LoadPicture("data\pictures\" & ReadIniFile("ini\graphics.ini", "SystemBitmaps", "Title"))
 Else
-  Image1.Picture = frmSplash.imglogo
+  Image1.Picture = frmSplash.imgLogo
 End If
 Me.Caption = "DiskMag ENGINE " & numero
 NuMx.Caption = "»Ìslo " & numero
 NuMx.Top = Lis.Top + 5
 NuMx.Left = XitBTN.Left + XitBTN.Width - NuMx.Width - 5
-frmSplash.progressbar1.Value = frmSplash.progressbar1.Value + 1
+frmSplash.ProgressBar1.Value = frmSplash.ProgressBar1.Value + 1
 Usr.Left = XitBTN.Left + XitBTN.Width - Usr.Width - 5
 Usr.Top = NuMx.Top + NuMx.Height + 3
-frmSplash.progressbar1.Value = frmSplash.progressbar1.Value + 1
+frmSplash.ProgressBar1.Value = frmSplash.ProgressBar1.Value + 1
 MCIfrm.Hide
 InitMusic
 Console.Show
@@ -384,7 +383,7 @@ ConsoleWrite "StartTime=" & Time
 ConsoleWrite "StartSubject=" & Main.Caption
 ConsoleWrite "StartMusic=" & UCase(MCIfrm.AMOVIE1.filename)
 ConsoleWrite "StartResolution=" & res
-frmSplash.progressbar1.Value = frmSplash.progressbar1.Value + 1
+frmSplash.ProgressBar1.Value = frmSplash.ProgressBar1.Value + 1
 If VaLuEE = True Then
   ConsoleWrite "StartGODmode=ON"
   ConsoleWrite "StartUser=" & User
@@ -405,7 +404,7 @@ End Select
 ConsoleWrite "Init.TEST DONE"
 ConsoleWrite "Ready ..."
 ConsoleWrite ""
-frmSplash.progressbar1.Value = frmSplash.progressbar1.Value + 1
+frmSplash.ProgressBar1.Value = frmSplash.ProgressBar1.Value + 1
 SaveSetting appname:="Harley Software", section:="Jooky-Viewer", Key:="Play_Ready", setting:="1"
 DrawBckGround Me, "Main", True
 SaveSetting appname:="Harley Software", section:="Jooky-Viewer", Key:="Inst_File", setting:=""
@@ -414,7 +413,7 @@ GoTo 2
 If Err Then DetError Err.Number, "init.test"
 GoTo 2
 2:
-frmSplash.progressbar1.Value = 10
+frmSplash.ProgressBar1.Value = 10
 Unload frmSplash
 End Sub
 
@@ -594,7 +593,7 @@ ass:
 If Err.Number = 53 Then
     MsgBox Title:="ERROR", prompt:="Obr·zek NEJNI !!!" & Chr(10) & "Zobrazuji n·hradnÌ.", Buttons:=vbInformation
     ConsoleWrite "PIXVIEWER.error=NO SECRET PICTURE DETECTED"
-    Sexret.Image1.Picture = frmSplash.imglogo.Picture
+    Sexret.Image1.Picture = frmSplash.imgLogo.Picture
     Sexret.Show
     Exit Sub
 End If

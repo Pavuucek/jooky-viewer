@@ -1,4 +1,5 @@
-VERSION 4.00
+VERSION 5.00
+Object = "{3B7C8863-D78F-101B-B9B5-04021C009402}#1.2#0"; "RICHTX32.OCX"
 Begin VB.Form ErrorList 
    AutoRedraw      =   -1  'True
    BorderStyle     =   4  'Fixed ToolWindow
@@ -7,16 +8,13 @@ Begin VB.Form ErrorList
    ClientLeft      =   225
    ClientTop       =   780
    ClientWidth     =   6690
-   Height          =   4935
-   Left            =   165
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
+   PaletteMode     =   1  'UseZOrder
    ScaleHeight     =   4425
    ScaleWidth      =   6690
    ShowInTaskbar   =   0   'False
-   Top             =   330
-   Width           =   6810
    Begin RichTextLib.RichTextBox RichTextBox1 
       Height          =   4215
       Left            =   0
@@ -26,9 +24,9 @@ Begin VB.Form ErrorList
       _ExtentX        =   11668
       _ExtentY        =   7435
       _Version        =   393217
-      Enabled         =   -1  'True
       ReadOnly        =   -1  'True
       ScrollBars      =   2
+      TextRTF         =   $"ErrorList.frx":0000
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "MS Sans Serif"
          Size            =   12
@@ -41,7 +39,9 @@ Begin VB.Form ErrorList
    End
 End
 Attribute VB_Name = "ErrorList"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 

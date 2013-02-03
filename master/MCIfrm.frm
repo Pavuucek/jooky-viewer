@@ -1,4 +1,5 @@
-VERSION 4.00
+VERSION 5.00
+Object = "{C1A8AF28-1257-101B-8FB0-0020AF039CA3}#1.1#0"; "MCI32.OCX"
 Begin VB.Form MCIfrm 
    BackColor       =   &H00FF0000&
    BorderStyle     =   1  'Fixed Single
@@ -9,21 +10,18 @@ Begin VB.Form MCIfrm
    ClientWidth     =   7560
    ClipControls    =   0   'False
    ControlBox      =   0   'False
-   Height          =   4185
    Icon            =   "MCIfrm.frx":0000
-   Left            =   705
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
    NegotiateMenus  =   0   'False
+   PaletteMode     =   1  'UseZOrder
    ScaleHeight     =   3675
    ScaleWidth      =   7560
-   Top             =   1260
-   Width           =   7680
    Begin VB.FileListBox File1 
       BackColor       =   &H00000000&
       ForeColor       =   &H00FFFFFF&
-      Height          =   2010
+      Height          =   1845
       Left            =   120
       Pattern         =   "*.mid"
       TabIndex        =   0
@@ -58,7 +56,7 @@ Begin VB.Form MCIfrm
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Zavøít"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -79,7 +77,7 @@ Begin VB.Form MCIfrm
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "Nastavení tiskárny"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -100,7 +98,7 @@ Begin VB.Form MCIfrm
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "&Vylosovat Hudbu"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -125,7 +123,9 @@ Begin VB.Form MCIfrm
    End
 End
 Attribute VB_Name = "MCIfrm"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 
@@ -134,7 +134,7 @@ If Err Then DetError Err.Number, "controlpanel"
 End Sub
 
 Private Sub AMOVIE1_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-PrNseTuP.ForeColor = &HFFFF&
+PrNSeTuP.ForeColor = &HFFFF&
 CloseB.ForeColor = &HFFFF&
 Me.MousePointer = 99
 Me.MouseIcon = Main.XitBTN.MouseIcon
@@ -172,7 +172,7 @@ Me.Hide
 End Sub
 
 Private Sub CloseB_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-PrNseTuP.ForeColor = &HFFFF&
+PrNSeTuP.ForeColor = &HFFFF&
 CloseB.ForeColor = &HC000C0
 Me.MousePointer = 99
 Me.MouseIcon = Main.XitBTN.MouseIcon
@@ -204,7 +204,7 @@ GoTo 2
 End Sub
 
 Private Sub File1_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-PrNseTuP.ForeColor = &HFFFF&
+PrNSeTuP.ForeColor = &HFFFF&
 CloseB.ForeColor = &HFFFF&
 Me.MousePointer = 99
 Me.MouseIcon = Main.XitBTN.MouseIcon
@@ -215,7 +215,7 @@ End Sub
 Private Sub Form_Load()
 CenterForm Me
 DrawBckGround Me, "ControlPanel"
-PrNseTuP.Visible = False
+PrNSeTuP.Visible = False
 Me.Icon = Main.Icon
 File1.Path = "data\music"
 File1.Pattern = "*.MID;*.WAV"
@@ -223,9 +223,9 @@ End Sub
 
 
 Private Sub Form_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-PrNseTuP.ForeColor = &HFFFF&
+PrNSeTuP.ForeColor = &HFFFF&
 CloseB.ForeColor = &HFFFF&
-rndmus.ForeColor = &HFFFF&
+RNDmus.ForeColor = &HFFFF&
 Me.MousePointer = vbDefault
 End Sub
 
@@ -237,9 +237,9 @@ InitMusic
 End Sub
 
 Private Sub imgbackground_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-PrNseTuP.ForeColor = &HFFFF&
+PrNSeTuP.ForeColor = &HFFFF&
 CloseB.ForeColor = &HFFFF&
-rndmus.ForeColor = &HFFFF&
+RNDmus.ForeColor = &HFFFF&
 Me.MousePointer = vbDefault
 
 End Sub
@@ -255,7 +255,7 @@ Private Sub MMControl1_Done(NotifyCode As Integer)
 End Sub
 
 Private Sub PrNseTuP_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-PrNseTuP.ForeColor = &HC000C0
+PrNSeTuP.ForeColor = &HC000C0
 CloseB.ForeColor = &HFFFF&
 End Sub
 
@@ -275,7 +275,7 @@ ConsoleWrite "INITMUSIC.random=" & MCIfrm.AMOVIE1.filename
 End Sub
 
 Private Sub rndmus_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-rndmus.ForeColor = &HC000C0
+RNDmus.ForeColor = &HC000C0
 Me.MousePointer = 99
 Me.MouseIcon = Main.XitBTN.MouseIcon
 

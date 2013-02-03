@@ -1,4 +1,4 @@
-VERSION 4.00
+VERSION 5.00
 Begin VB.Form Sexret 
    BorderStyle     =   1  'Fixed Single
    Caption         =   "Tajný Obrázek, pro návrat zmáèknìte X ==>"
@@ -6,16 +6,13 @@ Begin VB.Form Sexret
    ClientLeft      =   1140
    ClientTop       =   1515
    ClientWidth     =   6690
-   Height          =   4650
    Icon            =   "Secret.frx":0000
-   Left            =   1080
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
+   PaletteMode     =   1  'UseZOrder
    ScaleHeight     =   4140
    ScaleWidth      =   6690
-   Top             =   1065
-   Width           =   6810
    WindowState     =   2  'Maximized
    Begin VB.Image Image1 
       Height          =   855
@@ -26,7 +23,9 @@ Begin VB.Form Sexret
    End
 End
 Attribute VB_Name = "Sexret"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
 Option Explicit

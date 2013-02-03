@@ -1,4 +1,4 @@
-VERSION 4.00
+VERSION 5.00
 Begin VB.Form PixFRM 
    BackColor       =   &H00FF0000&
    BorderStyle     =   0  'None
@@ -9,22 +9,19 @@ Begin VB.Form PixFRM
    ClientWidth     =   6675
    ClipControls    =   0   'False
    ControlBox      =   0   'False
-   Height          =   4650
-   Left            =   1350
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
    NegotiateMenus  =   0   'False
+   PaletteMode     =   1  'UseZOrder
    ScaleHeight     =   4140
    ScaleWidth      =   6675
    ShowInTaskbar   =   0   'False
-   Top             =   2175
-   Width           =   6795
    WindowState     =   2  'Maximized
    Begin VB.FileListBox File1 
       BackColor       =   &H00000000&
       ForeColor       =   &H00FFFFFF&
-      Height          =   1035
+      Height          =   870
       Left            =   120
       Pattern         =   "*.bmp"
       TabIndex        =   0
@@ -35,7 +32,7 @@ Begin VB.Form PixFRM
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "@@@"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   9.75
          Charset         =   238
@@ -56,7 +53,7 @@ Begin VB.Form PixFRM
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "Obrázky"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -77,7 +74,7 @@ Begin VB.Form PixFRM
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "Zpìt"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -98,7 +95,7 @@ Begin VB.Form PixFRM
       BackColor       =   &H00FF0000&
       BackStyle       =   0  'Transparent
       Caption         =   "Tisk"
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+      BeginProperty Font 
          Name            =   "Arial"
          Size            =   15
          Charset         =   238
@@ -123,7 +120,9 @@ Begin VB.Form PixFRM
    End
 End
 Attribute VB_Name = "PixFRM"
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
 Private Sub Back3_Click()
@@ -159,9 +158,9 @@ Image1.Picture = LoadPicture(File1.Path & "\" & File1.filename)
 clx = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="Clanek")
 em = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="EditMode")
 If em = "1" And ReadIniFile("ini\main.ini", clx, File1.filename) = "" Then
-  PoPiSeK.Caption = "Klepnìte sem pro zadání popisku k obrázku"
+  PopiseK.Caption = "Klepnìte sem pro zadání popisku k obrázku"
 Else
-  PoPiSeK.Caption = ReadIniFile("ini\main.ini", clx, File1.filename)
+  PopiseK.Caption = ReadIniFile("ini\main.ini", clx, File1.filename)
 End If
 GoTo 2
 1:
@@ -205,7 +204,7 @@ Image1.Height = 768 - Back.Top + 2
 End Select
 PrN.Enabled = False
 PrN.Visible = False
-PoPiSeK.Width = Image1.Width - PoPiSeK.Left - 10
+PopiseK.Width = Image1.Width - PopiseK.Left - 10
 End Sub
 
 Private Sub Form_Load()
@@ -231,8 +230,8 @@ Case "1024x768"
 Image1.Width = 1024
 Image1.Height = 768 - Back.Top + 2
 End Select
-PoPiSeK.Caption = ""
-PoPiSeK.Width = Image1.Width - PoPiSeK.Left - 10
+PopiseK.Caption = ""
+PopiseK.Width = Image1.Width - PopiseK.Left - 10
 PrN.Enabled = False
 PrN.Visible = False
 GoTo 2
@@ -267,7 +266,7 @@ clx = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="Clan
 em = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="EditMode")
 If em = "1" Then
   ib = InputBox("Zadej popisek k obrázku...", clx)
-  PoPiSeK.Caption = ib
+  PopiseK.Caption = ib
   WriteIniFile "ini\main.ini", clx, File1.filename, ib
 End If
 End Sub
