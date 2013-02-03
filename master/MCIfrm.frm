@@ -127,7 +127,7 @@ End
 Attribute VB_Name = "MCIfrm"
 Attribute VB_Creatable = False
 Attribute VB_Exposed = False
-
+Option Explicit
 
 Private Sub AMOVIE1_Error(ByVal SCode As Integer, ByVal Description As String, ByVal Source As String, CancelDisplay As Boolean)
 If Err Then DetError Err.Number, "controlpanel"

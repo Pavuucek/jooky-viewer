@@ -9,7 +9,7 @@ Begin VB.Form PRGinF
    ClientWidth     =   4830
    ClipControls    =   0   'False
    ControlBox      =   0   'False
-   Height          =   5385
+   Height          =   5490
    Left            =   2280
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
@@ -17,7 +17,7 @@ Begin VB.Form PRGinF
    NegotiateMenus  =   0   'False
    ScaleHeight     =   4980
    ScaleWidth      =   4830
-   Top             =   1920
+   Top             =   1815
    Width           =   4950
    Begin VB.Image Image1 
       Height          =   2535
@@ -170,6 +170,8 @@ End
 Attribute VB_Name = "PRGinF"
 Attribute VB_Creatable = False
 Attribute VB_Exposed = False
+
+Option Explicit
 Private Sub CloseX_Click()
 PlaySound 11
 ConsoleWrite "ABOUT.uninit"

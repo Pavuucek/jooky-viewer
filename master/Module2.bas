@@ -1,5 +1,5 @@
 Attribute VB_Name = "Console_Engine"
-
+Option Explicit
 Function IsScript(Script As String) As Boolean
 On Error GoTo 1
 If FileExists(Script) And LCase(ReadIniFile(Script, "FileInfo", "ID")) = "jooky_script" Then

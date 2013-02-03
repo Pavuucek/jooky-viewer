@@ -6,7 +6,7 @@ Begin VB.Form Sexret
    ClientLeft      =   1140
    ClientTop       =   1515
    ClientWidth     =   6690
-   Height          =   4545
+   Height          =   4650
    Icon            =   "Secret.frx":0000
    Left            =   1080
    LinkTopic       =   "Form1"
@@ -14,7 +14,7 @@ Begin VB.Form Sexret
    MinButton       =   0   'False
    ScaleHeight     =   4140
    ScaleWidth      =   6690
-   Top             =   1170
+   Top             =   1065
    Width           =   6810
    WindowState     =   2  'Maximized
    Begin VB.Image Image1 
@@ -28,6 +28,8 @@ End
 Attribute VB_Name = "Sexret"
 Attribute VB_Creatable = False
 Attribute VB_Exposed = False
+
+Option Explicit
 Private Sub Form_Activate()
 With Image1
 .Height = Screen.Height

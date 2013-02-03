@@ -9,7 +9,7 @@ Begin VB.Form TextFRM
    ClientTop       =   1860
    ClientWidth     =   6690
    ControlBox      =   0   'False
-   Height          =   4530
+   Height          =   4635
    Left            =   1395
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
@@ -19,7 +19,7 @@ Begin VB.Form TextFRM
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   446
    ShowInTaskbar   =   0   'False
-   Top             =   1515
+   Top             =   1410
    Width           =   6810
    WindowState     =   2  'Maximized
    Begin VB.ListBox List1 
@@ -67,9 +67,10 @@ Begin VB.Form TextFRM
       Width           =   3615
       _ExtentX        =   6376
       _ExtentY        =   7223
-      _Version        =   327680
+      _Version        =   393217
       BackColor       =   16777215
       BorderStyle     =   0
+      Enabled         =   -1  'True
       HideSelection   =   0   'False
       ReadOnly        =   -1  'True
       ScrollBars      =   3
@@ -201,7 +202,7 @@ End
 Attribute VB_Name = "TextFRM"
 Attribute VB_Creatable = False
 Attribute VB_Exposed = False
-
+Option Explicit
 Private Sub Back4_Click()
 PlaySound 11
 em = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="EditMode")

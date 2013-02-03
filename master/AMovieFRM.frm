@@ -9,7 +9,7 @@ Begin VB.Form AMovieFRM
    ClientWidth     =   6690
    ClipControls    =   0   'False
    ControlBox      =   0   'False
-   Height          =   4455
+   Height          =   4560
    Left            =   1080
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
@@ -19,7 +19,7 @@ Begin VB.Form AMovieFRM
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   446
    ShowInTaskbar   =   0   'False
-   Top             =   1290
+   Top             =   1185
    Width           =   6810
    WindowState     =   2  'Maximized
    Begin VB.FileListBox File1 
@@ -99,7 +99,7 @@ End
 Attribute VB_Name = "AMovieFRM"
 Attribute VB_Creatable = False
 Attribute VB_Exposed = False
-
+Option Explicit
 Private Sub ActiveXPlugin1_GotFocus()
 End Sub
 

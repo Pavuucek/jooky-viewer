@@ -9,7 +9,7 @@ Begin VB.Form List
    ClientWidth     =   5535
    ClipControls    =   0   'False
    ForeColor       =   &H00FF00FF&
-   Height          =   4725
+   Height          =   4830
    Icon            =   "List.frx":0000
    Left            =   1830
    LinkTopic       =   "Form1"
@@ -20,7 +20,7 @@ Begin VB.Form List
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   369
    ShowInTaskbar   =   0   'False
-   Top             =   660
+   Top             =   555
    Width           =   5655
    Begin VB.Label Uvodnik 
       AutoSize        =   -1  'True
@@ -369,7 +369,7 @@ End
 Attribute VB_Name = "List"
 Attribute VB_Creatable = False
 Attribute VB_Exposed = False
-
+Option Explicit
 Private Sub MoveFocus(ByVal bTn As Label, ByVal iMg As Image)
 With iMg
 .Left = bTn.Left
@@ -407,7 +407,7 @@ Future.ForeColor = &HFFFF&
 Back.ForeColor = &HFFFF&
 Bux.ForeColor = &HFFFF&
 Me.MousePointer = 99
-Me.MouseIcon = maIn.XitBTN.MouseIcon
+Me.MouseIcon = Main.XitBTN.MouseIcon
 
 End Sub
 
@@ -446,7 +446,7 @@ Future.ForeColor = &HFFFF&
 Back.ForeColor = &HC000C0
 Bux.ForeColor = &HFFFF&
 Me.MousePointer = 99
-Me.MouseIcon = maIn.XitBTN.MouseIcon
+Me.MouseIcon = Main.XitBTN.MouseIcon
 
 End Sub
 
@@ -478,7 +478,7 @@ Future.ForeColor = &HFFFF&
 Back.ForeColor = &HFFFF&
 Bux.ForeColor = &HC000C0
 Me.MousePointer = 99
-Me.MouseIcon = maIn.XitBTN.MouseIcon
+Me.MouseIcon = Main.XitBTN.MouseIcon
 
 End Sub
 
@@ -515,7 +515,7 @@ Future.ForeColor = &HFFFF&
 Back.ForeColor = &HFFFF&
 Bux.ForeColor = &HFFFF&
 Me.MousePointer = 99
-Me.MouseIcon = maIn.XitBTN.MouseIcon
+Me.MouseIcon = Main.XitBTN.MouseIcon
 
 End Sub
 
@@ -552,8 +552,8 @@ End Sub
 Private Sub Form_Unload(Cancel As Integer)
 PlaySound 11
 ConsoleWrite "LIST.uninit"
-maIn.Show
-maIn.Enabled = True
+Main.Show
+Main.Enabled = True
 End Sub
 
 Private Sub Future_Click()
@@ -584,7 +584,7 @@ Future.ForeColor = &HC000C0
 Back.ForeColor = &HFFFF&
 Bux.ForeColor = &HFFFF&
 Me.MousePointer = 99
-Me.MouseIcon = maIn.XitBTN.MouseIcon
+Me.MouseIcon = Main.XitBTN.MouseIcon
 
 End Sub
 
@@ -648,7 +648,7 @@ Future.ForeColor = &HFFFF&
 Back.ForeColor = &HFFFF&
 Bux.ForeColor = &HFFFF&
 Me.MousePointer = 99
-Me.MouseIcon = maIn.XitBTN.MouseIcon
+Me.MouseIcon = Main.XitBTN.MouseIcon
 
 End Sub
 
@@ -685,7 +685,7 @@ Future.ForeColor = &HFFFF&
 Back.ForeColor = &HFFFF&
 Bux.ForeColor = &HFFFF&
 Me.MousePointer = 99
-Me.MouseIcon = maIn.XitBTN.MouseIcon
+Me.MouseIcon = Main.XitBTN.MouseIcon
 
 End Sub
 
@@ -717,7 +717,7 @@ Future.ForeColor = &HFFFF&
 Back.ForeColor = &HFFFF&
 Bux.ForeColor = &HFFFF&
 Me.MousePointer = 99
-Me.MouseIcon = maIn.XitBTN.MouseIcon
+Me.MouseIcon = Main.XitBTN.MouseIcon
 
 End Sub
 
@@ -750,7 +750,7 @@ Future.ForeColor = &HFFFF&
 Back.ForeColor = &HFFFF&
 Bux.ForeColor = &HFFFF&
 Me.MousePointer = 99
-Me.MouseIcon = maIn.XitBTN.MouseIcon
+Me.MouseIcon = Main.XitBTN.MouseIcon
 
 End Sub
 
@@ -803,7 +803,7 @@ Future.ForeColor = &HFFFF&
 Back.ForeColor = &HFFFF&
 Bux.ForeColor = &HFFFF&
 Me.MousePointer = 99
-Me.MouseIcon = maIn.XitBTN.MouseIcon
+Me.MouseIcon = Main.XitBTN.MouseIcon
 
 End Sub
 
@@ -840,7 +840,7 @@ Future.ForeColor = &HFFFF&
 Back.ForeColor = &HFFFF&
 Bux.ForeColor = &HFFFF&
 Me.MousePointer = 99
-Me.MouseIcon = maIn.XitBTN.MouseIcon
+Me.MouseIcon = Main.XitBTN.MouseIcon
 
 End Sub
 
@@ -870,7 +870,7 @@ Future.ForeColor = &HFFFF&
 Back.ForeColor = &HFFFF&
 Bux.ForeColor = &HFFFF&
 Me.MousePointer = 99
-Me.MouseIcon = maIn.XitBTN.MouseIcon
+Me.MouseIcon = Main.XitBTN.MouseIcon
 
 End Sub
 
@@ -909,7 +909,7 @@ Future.ForeColor = &HFFFF&
 Back.ForeColor = &HFFFF&
 Bux.ForeColor = &HFFFF&
 Me.MousePointer = 99
-Me.MouseIcon = maIn.XitBTN.MouseIcon
+Me.MouseIcon = Main.XitBTN.MouseIcon
 
 End Sub
 
@@ -942,7 +942,7 @@ Future.ForeColor = &HFFFF&
 Back.ForeColor = &HFFFF&
 Bux.ForeColor = &HFFFF&
 Me.MousePointer = 99
-Me.MouseIcon = maIn.XitBTN.MouseIcon
+Me.MouseIcon = Main.XitBTN.MouseIcon
 
 End Sub
 
@@ -975,7 +975,7 @@ Future.ForeColor = &HFFFF&
 Back.ForeColor = &HFFFF&
 Bux.ForeColor = &HFFFF&
 Me.MousePointer = 99
-Me.MouseIcon = maIn.XitBTN.MouseIcon
+Me.MouseIcon = Main.XitBTN.MouseIcon
 
 End Sub
 
@@ -994,7 +994,7 @@ End Sub
 
 Private Sub Uvodnik_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
 Me.MousePointer = 99
-Me.MouseIcon = maIn.XitBTN.MouseIcon
+Me.MouseIcon = Main.XitBTN.MouseIcon
 Uvodnik.ForeColor = &HC000C0
 PCGamez.ForeColor = &HFFFF&
 Soft.ForeColor = &HFFFF&

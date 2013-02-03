@@ -6,20 +6,20 @@ Begin VB.Form PCGames
    ClientHeight    =   2565
    ClientLeft      =   2460
    ClientTop       =   2685
-   ClientWidth     =   1560
+   ClientWidth     =   1725
    ClipControls    =   0   'False
    ForeColor       =   &H00FF0000&
-   Height          =   2970
+   Height          =   3075
    Left            =   2400
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
    NegotiateMenus  =   0   'False
    ScaleHeight     =   2565
-   ScaleWidth      =   1560
+   ScaleWidth      =   1725
    ShowInTaskbar   =   0   'False
-   Top             =   2340
-   Width           =   1680
+   Top             =   2235
+   Width           =   1845
    Begin VB.Label Rec 
       AutoSize        =   -1  'True
       BackColor       =   &H00FF0000&
@@ -135,7 +135,7 @@ End
 Attribute VB_Name = "PCGames"
 Attribute VB_Creatable = False
 Attribute VB_Exposed = False
-
+Option Explicit
 Private Sub Back3_Click()
 Unload Me
 End Sub

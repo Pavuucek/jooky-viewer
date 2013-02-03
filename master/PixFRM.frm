@@ -9,7 +9,7 @@ Begin VB.Form PixFRM
    ClientWidth     =   6675
    ClipControls    =   0   'False
    ControlBox      =   0   'False
-   Height          =   4545
+   Height          =   4650
    Left            =   1350
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
@@ -18,7 +18,7 @@ Begin VB.Form PixFRM
    ScaleHeight     =   4140
    ScaleWidth      =   6675
    ShowInTaskbar   =   0   'False
-   Top             =   2280
+   Top             =   2175
    Width           =   6795
    WindowState     =   2  'Maximized
    Begin VB.FileListBox File1 
@@ -125,6 +125,7 @@ End
 Attribute VB_Name = "PixFRM"
 Attribute VB_Creatable = False
 Attribute VB_Exposed = False
+Option Explicit
 Private Sub Back3_Click()
 End Sub
 

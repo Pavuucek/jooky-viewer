@@ -8,7 +8,7 @@ Begin VB.Form Main
    ClientLeft      =   1170
    ClientTop       =   2295
    ClientWidth     =   9480
-   Height          =   3975
+   Height          =   4080
    Icon            =   "Main.frx":0000
    Left            =   1110
    LinkTopic       =   "Form1"
@@ -18,7 +18,7 @@ Begin VB.Form Main
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   632
    ShowInTaskbar   =   0   'False
-   Top             =   1950
+   Top             =   1845
    Width           =   9600
    WindowState     =   2  'Maximized
    Begin VB.CommandButton Secret 
@@ -210,7 +210,7 @@ End
 Attribute VB_Name = "Main"
 Attribute VB_Creatable = False
 Attribute VB_Exposed = False
-
+Option Explicit
 Private Sub Command1_Click()
 RemoveShellLink "", "Harley Software ltd"
 End Sub

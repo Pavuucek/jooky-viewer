@@ -8,7 +8,7 @@ Begin VB.Form ReklFRM
    ClientWidth     =   6690
    ClipControls    =   0   'False
    ControlBox      =   0   'False
-   Height          =   4545
+   Height          =   4650
    Left            =   1095
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
@@ -17,7 +17,7 @@ Begin VB.Form ReklFRM
    ScaleHeight     =   276
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   446
-   Top             =   1185
+   Top             =   1080
    Width           =   6810
    WindowState     =   2  'Maximized
    Begin VB.Image Image1 
@@ -31,6 +31,7 @@ End
 Attribute VB_Name = "ReklFRM"
 Attribute VB_Creatable = False
 Attribute VB_Exposed = False
+Option Explicit
 Private Sub ContinueX_Click()
 End Sub
 

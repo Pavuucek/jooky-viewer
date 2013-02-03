@@ -8,7 +8,7 @@ Begin VB.Form Console
    ClientTop       =   1845
    ClientWidth     =   6675
    ClipControls    =   0   'False
-   Height          =   4530
+   Height          =   4635
    Icon            =   "Console.frx":0000
    Left            =   1440
    LinkTopic       =   "Form1"
@@ -16,7 +16,7 @@ Begin VB.Form Console
    NegotiateMenus  =   0   'False
    ScaleHeight     =   4125
    ScaleWidth      =   6675
-   Top             =   1500
+   Top             =   1395
    Width           =   6795
    WindowState     =   1  'Minimized
    Begin VB.TextBox Text1 
@@ -55,13 +55,13 @@ Begin VB.Form Console
       Width           =   6495
       _ExtentX        =   11456
       _ExtentY        =   5318
-      _Version        =   327680
+      _Version        =   393217
       BackColor       =   0
+      Enabled         =   -1  'True
       ReadOnly        =   -1  'True
       ScrollBars      =   2
       MousePointer    =   99
-      TextRTF         =   $"Console.frx":6F44
-      MouseIcon       =   "Console.frx":702E
+      MouseIcon       =   "Console.frx":6F44
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -76,6 +76,7 @@ End
 Attribute VB_Name = "Console"
 Attribute VB_Creatable = False
 Attribute VB_Exposed = False
+Option Explicit
 Private Sub Form_Load()
 On Error GoTo 1
 imbPozadi.Height = Me.Height

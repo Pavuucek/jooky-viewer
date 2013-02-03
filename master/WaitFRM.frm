@@ -6,7 +6,7 @@ Begin VB.Form WaitFRM
    ClientTop       =   2340
    ClientWidth     =   4800
    ControlBox      =   0   'False
-   Height          =   1170
+   Height          =   1275
    Left            =   525
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
@@ -15,7 +15,7 @@ Begin VB.Form WaitFRM
    ScaleHeight     =   765
    ScaleWidth      =   4800
    ShowInTaskbar   =   0   'False
-   Top             =   1995
+   Top             =   1890
    Width           =   4920
    Begin VB.Label stav 
       Alignment       =   2  'Center
@@ -44,6 +44,8 @@ End
 Attribute VB_Name = "WaitFRM"
 Attribute VB_Creatable = False
 Attribute VB_Exposed = False
+
+Option Explicit
 Private Sub Form_Load()
 Me.MousePointer = 99
 Me.MouseIcon = frmSplash.MouseIcon

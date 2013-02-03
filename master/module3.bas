@@ -1,9 +1,11 @@
 Attribute VB_Name = "Jooky00"
+Option Explicit
 Public mstrLastCreatedShellGroup As String
 Declare Function OSfCreateShellGroup Lib "JOOKY00.DLL" Alias "fCreateShellFolder" (ByVal lpstrDirName As String) As Long
 Declare Function OSfCreateShellLink Lib "JOOKY00.DLL" Alias "fCreateShellLink" (ByVal lpstrFolderName As String, ByVal lpstrLinkName As String, ByVal lpstrLinkPath As String, ByVal lpstrLinkArguments As String) As Long
 Declare Function OSfRemoveShellLink Lib "JOOKY00.DLL" Alias "fRemoveShellLink" (ByVal lpstrFolderName As String, ByVal lpstrLinkName As String) As Long
 
+Const gstrSEP_DIR = "\"
 '-----------------------------------------------------------
 ' FUNCTION: DirExists
 '
@@ -20,6 +22,7 @@ Declare Function OSfRemoveShellLink Lib "JOOKY00.DLL" Alias "fRemoveShellLink" (
 Function DirExists(ByVal strDirName As String) As Integer
     Const strWILDCARD$ = "*.*"
     Const ATTR_DIRECTORY% = 16
+    Const gstrNULL = ""
 
     Dim strDummy As String
 
@@ -60,7 +63,6 @@ End Sub
 '
 Function FileExists(ByVal strPathName As String) As Integer
     Dim intFileNum As Integer
-
     On Error Resume Next
 
     '

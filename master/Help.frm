@@ -8,7 +8,7 @@ Begin VB.Form Help
    ClientTop       =   1515
    ClientWidth     =   6690
    ClipControls    =   0   'False
-   Height          =   4545
+   Height          =   4650
    Left            =   1080
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
@@ -18,7 +18,7 @@ Begin VB.Form Help
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   446
    ShowInTaskbar   =   0   'False
-   Top             =   1170
+   Top             =   1065
    Width           =   6810
    WindowState     =   2  'Maximized
    Begin RichTextLib.RichTextBox RichTextBox1 
@@ -29,9 +29,8 @@ Begin VB.Form Help
       Width           =   9615
       _ExtentX        =   16960
       _ExtentY        =   10398
-      _Version        =   327680
+      _Version        =   393217
       BackColor       =   16777215
-      Enabled         =   -1  'True
       HideSelection   =   0   'False
       ReadOnly        =   -1  'True
       ScrollBars      =   2
@@ -121,7 +120,7 @@ End
 Attribute VB_Name = "Help"
 Attribute VB_Creatable = False
 Attribute VB_Exposed = False
-
+Option Explicit
 Private Sub Back4_Click()
 Unload Me
 End Sub

@@ -1,4 +1,6 @@
 Attribute VB_Name = "Main_Engine"
+Option Explicit
+
 Public i As Integer
 Public WindoW As Integer
 Public ble As Integer

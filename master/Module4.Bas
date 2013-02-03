@@ -1,4 +1,6 @@
 Attribute VB_Name = "DataFile"
+Option Explicit
+
 Public Const DataFileHeader = "Jooky_Data_$_"
 Public TempDir As String
 Sub CreateTemp()

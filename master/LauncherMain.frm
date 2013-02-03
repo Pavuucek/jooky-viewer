@@ -73,6 +73,7 @@ End
 Attribute VB_Name = "LauncherMain"
 Attribute VB_Creatable = False
 Attribute VB_Exposed = False
+Option Explicit
 Private Sub Close_Click()
 End
 End Sub

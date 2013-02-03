@@ -17,7 +17,7 @@ Begin VB.Form Installer
       Italic          =   0   'False
       Strikethrough   =   0   'False
    EndProperty
-   Height          =   3585
+   Height          =   3690
    Icon            =   "Installer.frx":0000
    KeyPreview      =   -1  'True
    Left            =   0
@@ -27,7 +27,7 @@ Begin VB.Form Installer
    ScaleHeight     =   212
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   480
-   Top             =   1935
+   Top             =   1830
    Width           =   7320
    Begin VB.FileListBox File1 
       BackColor       =   &H00000000&
@@ -104,9 +104,8 @@ Begin VB.Form Installer
       Width           =   4455
       _ExtentX        =   7858
       _ExtentY        =   5106
-      _Version        =   327680
+      _Version        =   393217
       BackColor       =   16777215
-      Enabled         =   -1  'True
       ReadOnly        =   -1  'True
       ScrollBars      =   3
       TextRTF         =   $"Installer.frx":0442
@@ -124,7 +123,7 @@ End
 Attribute VB_Name = "Installer"
 Attribute VB_Creatable = False
 Attribute VB_Exposed = False
-
+Option Explicit
 
 
 

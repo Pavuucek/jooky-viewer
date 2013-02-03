@@ -6,7 +6,7 @@ Begin VB.Form frmSplash
    ClientTop       =   1410
    ClientWidth     =   7650
    ControlBox      =   0   'False
-   Height          =   4725
+   Height          =   4830
    Icon            =   "frmSplash.frx":0000
    KeyPreview      =   -1  'True
    Left            =   195
@@ -19,7 +19,7 @@ Begin VB.Form frmSplash
    ScaleMode       =   3  'Pixel
    ScaleWidth      =   510
    ShowInTaskbar   =   0   'False
-   Top             =   1065
+   Top             =   960
    Width           =   7770
    Begin VB.Frame Frame1 
       Height          =   4050
@@ -309,9 +309,6 @@ End
 Attribute VB_Name = "frmSplash"
 Attribute VB_Creatable = False
 Attribute VB_Exposed = False
-
-
-
 Option Explicit
 
 Private Sub Form_Load()

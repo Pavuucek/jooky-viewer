@@ -7,7 +7,7 @@ Begin VB.Form ErrorList
    ClientLeft      =   225
    ClientTop       =   780
    ClientWidth     =   6690
-   Height          =   4830
+   Height          =   4935
    Left            =   165
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
@@ -15,7 +15,7 @@ Begin VB.Form ErrorList
    ScaleHeight     =   4425
    ScaleWidth      =   6690
    ShowInTaskbar   =   0   'False
-   Top             =   435
+   Top             =   330
    Width           =   6810
    Begin RichTextLib.RichTextBox RichTextBox1 
       Height          =   4215
@@ -25,11 +25,9 @@ Begin VB.Form ErrorList
       Width           =   6615
       _ExtentX        =   11668
       _ExtentY        =   7435
-      _Version        =   327680
-      Enabled         =   -1  'True
+      _Version        =   393217
       ReadOnly        =   -1  'True
       ScrollBars      =   2
-      TextRTF         =   $"ErrorList.frx":0000
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "MS Sans Serif"
          Size            =   12
@@ -44,6 +42,8 @@ End
 Attribute VB_Name = "ErrorList"
 Attribute VB_Creatable = False
 Attribute VB_Exposed = False
+Option Explicit
+
 Private Sub Form_Load()
 WaitFRM.Show
 DoEvents
