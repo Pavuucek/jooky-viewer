@@ -30,10 +30,10 @@ Module Jooky00
 		On Error Resume Next
 		
 		AddDirSep(strDirName)
-		'UPGRADE_WARNING: Dir has a new behavior. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="9B7D5ADD-D8FE-4819-A36C-6DEDAF088CC7"'
+		'UPGRADE_WARNING: Dir has a new behavior. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="9B7D5ADD-D8FE-4819-A36C-6DEDAF088CC7"'
 		strDummy = Dir(strDirName & strWILDCARD, FileAttribute.Directory)
 #If Win16 Then
-		'UPGRADE_NOTE: #If #EndIf block was not upgraded because the expression Win16 did not evaluate to True or was not evaluated. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="27EE2C3C-05AF-4C04-B2AF-657B4FB6B5FC"'
+		'UPGRADE_NOTE: #If #EndIf block was not upgraded because the expression Win16 did not evaluate to True or was not evaluated. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="27EE2C3C-05AF-4C04-B2AF-657B4FB6B5FC"'
 		DirExists = IIf(Err, False, True)
 #Else
 		DirExists = IIf(strDummy = gstrNULL, False, True)
@@ -125,7 +125,7 @@ Module Jooky00
 		
 Retry: 
 		Dim fSuccess As Object
-		'UPGRADE_WARNING: Couldn't resolve default property of object fSuccess. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+		'UPGRADE_WARNING: Couldn't resolve default property of object fSuccess. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		fSuccess = OSfCreateShellGroup(strFolderName)
 		'   MsgBox mstrLastCreatedShellGroup
 	End Sub
@@ -193,7 +193,7 @@ Retry:
 		MsgBox(fSuccess)
 	End Sub
 	
-	'UPGRADE_NOTE: str was upgraded to str_Renamed. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="A9E4979A-37FA-4718-9994-97DD76ED70A7"'
+	'UPGRADE_NOTE: str was upgraded to str_Renamed. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="A9E4979A-37FA-4718-9994-97DD76ED70A7"'
 	Public Sub ReplaceDoubleQuotes(ByRef str_Renamed As String)
 		Dim i As Short
 		
@@ -252,8 +252,8 @@ Retry:
 		Dim intWidth As Short
 		Dim intHeight As Short
 		
-		'UPGRADE_NOTE: IsMissing() was changed to IsNothing(). Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="8AE1CB93-37AB-439A-A4FF-BE3B6760BB23"'
-		'UPGRADE_WARNING: Couldn't resolve default property of object fBorderCase. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+		'UPGRADE_NOTE: IsMissing() was changed to IsNothing(). Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8AE1CB93-37AB-439A-A4FF-BE3B6760BB23"'
+		'UPGRADE_WARNING: Couldn't resolve default property of object fBorderCase. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		If IsNothing(fBorderCase) Then fBorderCase = False
 		
 		'For this to work well, we need a white background and any color foreground (blue)
@@ -267,30 +267,30 @@ Retry:
 		'Format percentage and get attributes of text
 		'
 		Dim intPercent As Object
-		'UPGRADE_WARNING: Couldn't resolve default property of object intPercent. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+		'UPGRADE_WARNING: Couldn't resolve default property of object intPercent. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		intPercent = Int(100 * sngPercent + 0.5)
 		
 		'Never allow the percentage to be 0 or 100 unless it is exactly that value.  This
 		'prevents, for instance, the status bar from reaching 100% until we are entirely done.
-		'UPGRADE_WARNING: Couldn't resolve default property of object intPercent. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+		'UPGRADE_WARNING: Couldn't resolve default property of object intPercent. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		If intPercent = 0 Then
 			If Not fBorderCase Then
-				'UPGRADE_WARNING: Couldn't resolve default property of object intPercent. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+				'UPGRADE_WARNING: Couldn't resolve default property of object intPercent. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 				intPercent = 1
 			End If
-			'UPGRADE_WARNING: Couldn't resolve default property of object intPercent. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+			'UPGRADE_WARNING: Couldn't resolve default property of object intPercent. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		ElseIf intPercent = 100 Then 
 			If Not fBorderCase Then
-				'UPGRADE_WARNING: Couldn't resolve default property of object intPercent. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+				'UPGRADE_WARNING: Couldn't resolve default property of object intPercent. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 				intPercent = 99
 			End If
 		End If
 		
-		'UPGRADE_WARNING: Couldn't resolve default property of object intPercent. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+		'UPGRADE_WARNING: Couldn't resolve default property of object intPercent. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		strPercent = VB6.Format(intPercent) & "%"
-		'UPGRADE_ISSUE: PictureBox method pic.TextWidth was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: PictureBox method pic.TextWidth was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		intWidth = pic.TextWidth(strPercent)
-		'UPGRADE_ISSUE: PictureBox method pic.TextHeight was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: PictureBox method pic.TextHeight was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		intHeight = pic.TextHeight(strPercent)
 		
 		'
@@ -303,19 +303,19 @@ Retry:
 		'Need to draw a filled box with the pics background color to wipe out previous
 		'percentage display (if any)
 		'
-		'UPGRADE_ISSUE: PictureBox property pic.DrawMode was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: PictureBox property pic.DrawMode was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		pic.DrawMode = 13 ' Copy Pen
-		'UPGRADE_ISSUE: PictureBox method pic.Line was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		pic.Line (intX, intY) - (intWidth, intHeight), System.Drawing.ColorTranslator.ToOle(pic.BackColor), BF
+		'UPGRADE_ISSUE: PictureBox method pic.Line was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		pic.Line (intX, intY) - Step(intWidth, intHeight), System.Drawing.ColorTranslator.ToOle(pic.BackColor), BF
 		
 		'
 		'Back to the center print position and print the text
 		'
-		'UPGRADE_ISSUE: PictureBox property pic.CurrentX was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: PictureBox property pic.CurrentX was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		pic.CurrentX = intX
-		'UPGRADE_ISSUE: PictureBox property pic.CurrentY was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: PictureBox property pic.CurrentY was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		pic.CurrentY = intY
-		'UPGRADE_ISSUE: PictureBox method pic.Print was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: PictureBox method pic.Print was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		pic.Print(strPercent)
 		
 		'
@@ -325,13 +325,13 @@ Retry:
 		'wherever we touch it, and change the color of the background to blue
 		'wherever we touch it.
 		'
-		'UPGRADE_ISSUE: PictureBox property pic.DrawMode was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: PictureBox property pic.DrawMode was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		pic.DrawMode = 10 ' Not XOR Pen
 		If sngPercent > 0 Then
-			'UPGRADE_ISSUE: PictureBox method pic.Line was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+			'UPGRADE_ISSUE: PictureBox method pic.Line was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 			pic.Line (0, 0) - (VB6.PixelsToTwipsX(pic.Width) * sngPercent, VB6.PixelsToTwipsY(pic.Height)), System.Drawing.ColorTranslator.ToOle(pic.ForeColor), BF
 		Else
-			'UPGRADE_ISSUE: PictureBox method pic.Line was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+			'UPGRADE_ISSUE: PictureBox method pic.Line was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 			pic.Line (0, 0) - (VB6.PixelsToTwipsX(pic.Width), VB6.PixelsToTwipsY(pic.Height)), System.Drawing.ColorTranslator.ToOle(pic.BackColor), BF
 		End If
 		

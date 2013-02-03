@@ -17,6 +17,7 @@
 	'Required by the Windows Form Designer
 	Private components As System.ComponentModel.IContainer
 	Public ToolTip1 As System.Windows.Forms.ToolTip
+	Public PrintForm1 As Microsoft.VisualBasic.PowerPacks.Printing.PrintForm
 	Public WithEvents File1 As Microsoft.VisualBasic.Compatibility.VB6.FileListBox
 	Public WithEvents PopiseK As System.Windows.Forms.Label
 	Public WithEvents CaP As System.Windows.Forms.Label
@@ -30,6 +31,7 @@
 		Dim resources As System.Resources.ResourceManager = New System.Resources.ResourceManager(GetType(PixFRM))
 		Me.components = New System.ComponentModel.Container()
 		Me.ToolTip1 = New System.Windows.Forms.ToolTip(components)
+		Me.PrintForm1 = New Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(Me)
 		Me.File1 = New Microsoft.VisualBasic.Compatibility.VB6.FileListBox
 		Me.PopiseK = New System.Windows.Forms.Label
 		Me.CaP = New System.Windows.Forms.Label

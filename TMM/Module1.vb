@@ -12,19 +12,19 @@ Module Main_Engine
 	Public prgz As String
 	Public pthz As String
 	Public RexX As String
-	'UPGRADE_ISSUE: Declaring a parameter 'As Any' is not supported. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="FAE78A8D-8978-4FD4-8208-5B7324A8F795"'
+	'UPGRADE_ISSUE: Declaring a parameter 'As Any' is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="FAE78A8D-8978-4FD4-8208-5B7324A8F795"'
 	Declare Function sndPlaySound Lib "winmm.dll"  Alias "sndPlaySoundA"(ByVal lpszSoundName As Any, ByVal uFlags As Integer) As Integer
-	Public Const SND_ASYNC As Short = &H1s ' Play asynchronously
-	Public Const SND_NODEFAULT As Short = &H2s ' Don't use default sound
-	Public Const SND_MEMORY As Short = &H4s ' lpszSoundName points to a memory file
+	Public Const SND_ASYNC As Integer = &H1 ' Play asynchronously
+	Public Const SND_NODEFAULT As Integer = &H2 ' Don't use default sound
+	Public Const SND_MEMORY As Integer = &H4 ' lpszSoundName points to a memory file
 	Public Const gstrSEP_DIR As String = "\" ' Directory separator character
 	
 	Public SoundBuffer As String
 	
-	'UPGRADE_ISSUE: Declaring a parameter 'As Any' is not supported. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="FAE78A8D-8978-4FD4-8208-5B7324A8F795"'
+	'UPGRADE_ISSUE: Declaring a parameter 'As Any' is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="FAE78A8D-8978-4FD4-8208-5B7324A8F795"'
 	Declare Function GetPrivateProfileString Lib "kernel32"  Alias "GetPrivateProfileStringA"(ByVal lpApplicationName As String, ByVal lpKeyName As Any, ByVal lpDefault As String, ByVal lpReturnedString As String, ByVal nSize As Integer, ByVal lpFileName As String) As Integer
-	'UPGRADE_ISSUE: Declaring a parameter 'As Any' is not supported. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="FAE78A8D-8978-4FD4-8208-5B7324A8F795"'
-	'UPGRADE_ISSUE: Declaring a parameter 'As Any' is not supported. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="FAE78A8D-8978-4FD4-8208-5B7324A8F795"'
+	'UPGRADE_ISSUE: Declaring a parameter 'As Any' is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="FAE78A8D-8978-4FD4-8208-5B7324A8F795"'
+	'UPGRADE_ISSUE: Declaring a parameter 'As Any' is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="FAE78A8D-8978-4FD4-8208-5B7324A8F795"'
 	Declare Function WritePrivateProfileString Lib "kernel32"  Alias "WritePrivateProfileStringA"(ByVal lpApplicationName As String, ByVal lpKeyName As Any, ByVal lpString As Any, ByVal lpFileName As String) As Integer
 	
 	Declare Function ShellExecute Lib "shell32.dll"  Alias "ShellExecuteA"(ByVal hwnd As Integer, ByVal lpOperation As String, ByVal lpFile As String, ByVal lpParameters As String, ByVal lpDirectory As String, ByVal nShowCmd As Integer) As Integer
@@ -46,77 +46,77 @@ Module Main_Engine
 	
 	Sub DrawBckGround(ByVal frm As System.Windows.Forms.Form, ByVal NaM As String, Optional ByVal Mx As Object = Nothing)
 		On Error GoTo 1
-		'UPGRADE_NOTE: IsMissing() was changed to IsNothing(). Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="8AE1CB93-37AB-439A-A4FF-BE3B6760BB23"'
-		'UPGRADE_WARNING: Couldn't resolve default property of object Mx. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+		'UPGRADE_NOTE: IsMissing() was changed to IsNothing(). Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8AE1CB93-37AB-439A-A4FF-BE3B6760BB23"'
+		'UPGRADE_WARNING: Couldn't resolve default property of object Mx. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		If IsNothing(Mx) Then Mx = False
 		Dim sCm As Object
-		'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
-		'UPGRADE_WARNING: Couldn't resolve default property of object sCm. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+		'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
+		'UPGRADE_WARNING: Couldn't resolve default property of object sCm. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		sCm = frm.ScaleMode
-		'UPGRADE_ISSUE: Constant vbTwips was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
-		'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
+		'UPGRADE_ISSUE: Constant vbTwips was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
+		'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
 		frm.ScaleMode = vbTwips
-		'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
+		'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
 		With frm.imgbackground
-			'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
+			'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
 			.Stretch = True
-			'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
+			'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
 			.Left = 0
-			'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
+			'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
 			.Top = 0
 		End With
-		'UPGRADE_ISSUE: Constant vbPixels was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
-		'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
+		'UPGRADE_ISSUE: Constant vbPixels was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
+		'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
 		frm.ScaleMode = vbPixels
-		'UPGRADE_WARNING: Couldn't resolve default property of object Mx. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+		'UPGRADE_WARNING: Couldn't resolve default property of object Mx. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		If Mx = True Then
 			Select Case DetRes
 				Case "640x480"
-					'UPGRADE_ISSUE: Constant vbPixels was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
-					'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
+					'UPGRADE_ISSUE: Constant vbPixels was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
+					'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
 					frm.ScaleMode = vbPixels
-					'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
+					'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
 					frm.imgbackground.Height = 480
-					'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
+					'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
 					frm.imgbackground.Width = 640
 				Case "800x600"
-					'UPGRADE_ISSUE: Constant vbPixels was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
-					'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
+					'UPGRADE_ISSUE: Constant vbPixels was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
+					'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
 					frm.ScaleMode = vbPixels
-					'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
+					'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
 					frm.imgbackground.Height = 600
-					'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
+					'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
 					frm.imgbackground.Width = 800
 				Case "1024x768"
-					'UPGRADE_ISSUE: Constant vbPixels was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
-					'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
+					'UPGRADE_ISSUE: Constant vbPixels was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
+					'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
 					frm.ScaleMode = vbPixels
-					'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
+					'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
 					frm.imgbackground.Height = 768
-					'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
+					'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
 					frm.imgbackground.Width = 1024
 			End Select
 		Else
-			'UPGRADE_ISSUE: Constant vbTwips was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
-			'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
+			'UPGRADE_ISSUE: Constant vbTwips was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
+			'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
 			frm.ScaleMode = vbTwips
-			'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
+			'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
 			frm.imgbackground.Height = VB6.PixelsToTwipsY(frm.Height)
-			'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
+			'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
 			frm.imgbackground.Width = VB6.PixelsToTwipsX(frm.Width)
 		End If
-		'UPGRADE_ISSUE: Constant vbTwips was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
-		'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
+		'UPGRADE_ISSUE: Constant vbTwips was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
+		'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
 		frm.ScaleMode = vbTwips
 		If ReadIniFile("ini\graphics.ini", "BackGrounds", NaM) <> "" And FileExists("data\pictures\" & ReadIniFile("ini\graphics.ini", "BackGrounds", NaM)) Then
-			'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
+			'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
 			frm.imgbackground.Picture = System.Drawing.Image.FromFile("data\pictures\" & ReadIniFile("ini\graphics.ini", "BackGrounds", NaM))
 		Else
-			'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
+			'UPGRADE_ISSUE: Control imgbackground could not be resolved because it was within the generic namespace Form. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="084D22AD-ECB1-400F-B4C7-418ECEC5E36E"'
 			frm.imgbackground.Picture = Console.imbPozadi.Image
 		End If
-		'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
-		'UPGRADE_WARNING: Couldn't resolve default property of object sCm. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+		'UPGRADE_ISSUE: Form property frm.ScaleMode is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
+		'UPGRADE_WARNING: Couldn't resolve default property of object sCm. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		frm.ScaleMode = sCm
 		GoTo 2
 1: 
@@ -222,7 +222,7 @@ Module Main_Engine
 		Dim intPos As Short
 		Dim Buffer As Object
 		strBuffer = Space(gintMAX_SIZE)
-		'UPGRADE_WARNING: Couldn't resolve default property of object Buffer. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+		'UPGRADE_WARNING: Couldn't resolve default property of object Buffer. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		Buffer = WritePrivateProfileString(strSECTION, strKey, strValue, strIniFile)
 	End Sub
 	
@@ -335,31 +335,31 @@ Module Main_Engine
 		Select Case ResourceId
 			Case 11
 				If ReadIniFile("ini\sounds.ini", "SystemSounds", "Click") <> "" And FileExists("data\sounds\" & ReadIniFile("ini\sounds.ini", "SystemSounds", "Click")) Then
-					'UPGRADE_WARNING: Couldn't resolve default property of object Ret. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+					'UPGRADE_WARNING: Couldn't resolve default property of object Ret. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 					Ret = sndPlaySound("data\sounds\" & ReadIniFile("ini\sounds.ini", "SystemSounds", "Click"), SND_ASYNC)
 					System.Windows.Forms.Application.DoEvents()
 				End If
 			Case 14
 				If ReadIniFile("ini\sounds.ini", "SystemSounds", "Click") <> "" And FileExists("data\sounds\" & ReadIniFile("ini\sounds.ini", "SystemSounds", "RequestShutDown")) Then
-					'UPGRADE_WARNING: Couldn't resolve default property of object Ret. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+					'UPGRADE_WARNING: Couldn't resolve default property of object Ret. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 					Ret = sndPlaySound("data\sounds\" & ReadIniFile("ini\sounds.ini", "SystemSounds", "RequestShutDown"), SND_ASYNC)
 					System.Windows.Forms.Application.DoEvents()
 				End If
 			Case 10
 				If ReadIniFile("ini\sounds.ini", "SystemSounds", "Click") <> "" And FileExists("data\sounds\" & ReadIniFile("ini\sounds.ini", "SystemSounds", "Error")) Then
-					'UPGRADE_WARNING: Couldn't resolve default property of object Ret. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+					'UPGRADE_WARNING: Couldn't resolve default property of object Ret. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 					Ret = sndPlaySound("data\sounds\" & ReadIniFile("ini\sounds.ini", "SystemSounds", "Error"), SND_ASYNC)
 					System.Windows.Forms.Application.DoEvents()
 				End If
 			Case 13
 				If ReadIniFile("ini\sounds.ini", "SystemSounds", "Click") <> "" And FileExists("data\sounds\" & ReadIniFile("ini\sounds.ini", "SystemSounds", "ShutDown")) Then
-					'UPGRADE_WARNING: Couldn't resolve default property of object Ret. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+					'UPGRADE_WARNING: Couldn't resolve default property of object Ret. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 					Ret = sndPlaySound("data\sounds\" & ReadIniFile("ini\sounds.ini", "SystemSounds", "ShutDown"), SND_ASYNC)
 					System.Windows.Forms.Application.DoEvents()
 				End If
 			Case 12
 				If ReadIniFile("ini\sounds.ini", "SystemSounds", "Click") <> "" And FileExists("data\sounds\" & ReadIniFile("ini\sounds.ini", "SystemSounds", "IntroSound")) Then
-					'UPGRADE_WARNING: Couldn't resolve default property of object Ret. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+					'UPGRADE_WARNING: Couldn't resolve default property of object Ret. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 					Ret = sndPlaySound("data\sounds\" & ReadIniFile("ini\sounds.ini", "SystemSounds", "IntroSound"), 0)
 				End If
 			Case Else
@@ -392,7 +392,7 @@ Module Main_Engine
 		
 		t0 = VB.Timer()
 		Do While VB.Timer() - t0 < nSecond
-			'UPGRADE_ISSUE: DoEvents does not return a value. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="8D115264-E27F-4472-A684-865A00B5E826"'
+			'UPGRADE_ISSUE: DoEvents does not return a value. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8D115264-E27F-4472-A684-865A00B5E826"'
 			dummy = System.Windows.Forms.Application.DoEvents()
 			If VB.Timer() < t0 Then
 				t0 = t0 - 24 * 3600

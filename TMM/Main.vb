@@ -1,7 +1,7 @@
 Option Strict Off
 Option Explicit On
 Imports VB = Microsoft.VisualBasic
-'UPGRADE_NOTE: Main was upgraded to Main_Renamed. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="A9E4979A-37FA-4718-9994-97DD76ED70A7"'
+'UPGRADE_NOTE: Main was upgraded to Main_Renamed. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="A9E4979A-37FA-4718-9994-97DD76ED70A7"'
 Friend Class Main_Renamed
 	Inherits System.Windows.Forms.Form
 	Private Sub Command1_Click()
@@ -28,16 +28,16 @@ Friend Class Main_Renamed
 		CP.ForeColor = System.Drawing.ColorTranslator.FromOle(&HC000C0)
 		'xitBTN.ForeColor = &HFFFF&
 		VHS.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property Main.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property Main.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property Main.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property Main.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = XitBTN.MouseIcon
 		
 	End Sub
 	
 	
-	'UPGRADE_WARNING: Form event Main.Activate has a new behavior. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6BA9B8D2-2A32-4B6E-8D36-44949974A5B4"'
+	'UPGRADE_WARNING: Form event Main.Activate has a new behavior. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6BA9B8D2-2A32-4B6E-8D36-44949974A5B4"'
 	Private Sub Main_Activated(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Activated
 		Select Case DetRes
 			Case "640x480"
@@ -77,8 +77,8 @@ Friend Class Main_Renamed
 				SuP = "direct"
 		End Select
 		frmSplash.StatCon.Text = ""
-		'UPGRADE_ISSUE: Constant vbPixels was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
-		'UPGRADE_ISSUE: Form property Main.ScaleMode is not supported. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
+		'UPGRADE_ISSUE: Constant vbPixels was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="55B59875-9A95-4B71-9D6A-7C294BF7139D"'
+		'UPGRADE_ISSUE: Form property Main.ScaleMode is not supported. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="8027179A-CB3B-45C0-9863-FAA1AF983B59"'
 		Me.ScaleMode = vbPixels
 		imgtitle.Visible = True
 		imgtitle.Top = 0
@@ -87,7 +87,7 @@ Friend Class Main_Renamed
 		Dim res As Object
 		Select Case LCase(DetRes)
 			Case "640x480", "800x600", "1024x768"
-				'UPGRADE_WARNING: Couldn't resolve default property of object res. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+				'UPGRADE_WARNING: Couldn't resolve default property of object res. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 				res = DetRes
 			Case "less"
 				MsgBox("Máš nastavené moc MALÉ rozlišení Plochy, skus jedno z tìchto : 640x480, 800x600, 1024x768" & Chr(10) & "BALIM TO !!!", MsgBoxStyle.Information)
@@ -121,7 +121,7 @@ Friend Class Main_Renamed
 		End Select
 		frmSplash.ProgressBar1.Value = frmSplash.ProgressBar1.Value + 1
 		'Otestujeme, jestli uzivatel nepousti program dvakrat
-		'UPGRADE_ISSUE: App property App.PrevInstance was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="076C26E5-B7A9-4E77-B69C-B4448DF39E58"'
+		'UPGRADE_ISSUE: App property App.PrevInstance was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="076C26E5-B7A9-4E77-B69C-B4448DF39E58"'
 		If App.PrevInstance = True Then
 			MsgBox("Program je už jednou spuštìn. Zmáèni OK a program se zavøe", MsgBoxStyle.Exclamation, "JOOKY-VIEWER - DiskMag ENGINE")
 			End
@@ -129,10 +129,10 @@ Friend Class Main_Renamed
 		frmSplash.ProgressBar1.Value = frmSplash.ProgressBar1.Value + 1
 		Usr.Visible = False
 		VaLuEE = False
-		'UPGRADE_WARNING: Couldn't resolve default property of object XtrA. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+		'UPGRADE_WARNING: Couldn't resolve default property of object XtrA. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		If XtrA = "1" Then
 			Usr.Visible = True
-			'UPGRADE_WARNING: Couldn't resolve default property of object User. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+			'UPGRADE_WARNING: Couldn't resolve default property of object User. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 			Usr.Text = "GOD Mode ON" & Chr(10) & "User : " & User
 			VaLuEE = True
 		End If
@@ -190,12 +190,12 @@ Friend Class Main_Renamed
 		ConsoleWrite("StartTime=" & TimeOfDay)
 		ConsoleWrite("StartSubject=" & Me.Text)
 		ConsoleWrite("StartMusic=" & UCase(MCIfrm.AMOVIE1.filename))
-		'UPGRADE_WARNING: Couldn't resolve default property of object res. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+		'UPGRADE_WARNING: Couldn't resolve default property of object res. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		ConsoleWrite("StartResolution=" & res)
 		frmSplash.ProgressBar1.Value = frmSplash.ProgressBar1.Value + 1
 		If VaLuEE = True Then
 			ConsoleWrite("StartGODmode=ON")
-			'UPGRADE_WARNING: Couldn't resolve default property of object User. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+			'UPGRADE_WARNING: Couldn't resolve default property of object User. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 			ConsoleWrite("StartUser=" & User)
 		Else
 			ConsoleWrite("StartGODmode=OFF")
@@ -265,7 +265,7 @@ Friend Class Main_Renamed
 			End Select
 		Else
 			ConsoleWrite("CANCELED")
-			'UPGRADE_ISSUE: Event parameter Cancel was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="FB723E3C-1C06-4D2B-B083-E6CD0D334DA8"'
+			'UPGRADE_ISSUE: Event parameter Cancel was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="FB723E3C-1C06-4D2B-B083-E6CD0D334DA8"'
 			Cancel = True
 		End If
 		GoTo 2
@@ -297,10 +297,10 @@ Friend Class Main_Renamed
 		CP.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		'XitBTN.ForeColor = &HFFFF&
 		VHS.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property Main.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property Main.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property Main.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property Main.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = XitBTN.MouseIcon
 	End Sub
 	
@@ -365,10 +365,10 @@ Friend Class Main_Renamed
 		CP.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		'XitBTN.ForeColor = &HFFFF&
 		VHS.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property Main.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property Main.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property Main.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property Main.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = XitBTN.MouseIcon
 		
 	End Sub
@@ -396,10 +396,10 @@ Friend Class Main_Renamed
 		CP.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		'XitBTN.ForeColor = &HFFFF&
 		VHS.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property Main.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property Main.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property Main.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property Main.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = XitBTN.MouseIcon
 		
 	End Sub
@@ -413,9 +413,9 @@ Friend Class Main_Renamed
 		Dim XtrA As Object
 		Dim passwordik As String
 		On Error GoTo ass
-		'UPGRADE_WARNING: Couldn't resolve default property of object XtrA. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+		'UPGRADE_WARNING: Couldn't resolve default property of object XtrA. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		XtrA = GetSetting("Harley Software", "Jooky-Viewer", "GOD_Mode")
-		'UPGRADE_WARNING: Couldn't resolve default property of object XtrA. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+		'UPGRADE_WARNING: Couldn't resolve default property of object XtrA. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		If XtrA <> "1" Then
 			MsgBox("Nemáš zapnutý tzv. 'GOD mód', ten je potøeba pro vstup do tajné sekce !!!", MsgBoxStyle.Exclamation, "The Secret Section")
 			Exit Sub
@@ -456,10 +456,10 @@ ass:
 		Dim Shift As Short = System.Windows.Forms.Control.ModifierKeys \ &H10000
 		Dim X As Single = VB6.PixelsToTwipsX(eventArgs.X)
 		Dim Y As Single = VB6.PixelsToTwipsY(eventArgs.Y)
-		'UPGRADE_ISSUE: Form property Main.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property Main.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property Main.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property Main.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = XitBTN.MouseIcon
 		
 	End Sub
@@ -482,10 +482,10 @@ ass:
 		CP.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		'XitBTN.ForeColor = &HFFFF&
 		VHS.ForeColor = System.Drawing.ColorTranslator.FromOle(&HC000C0)
-		'UPGRADE_ISSUE: Form property Main.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property Main.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property Main.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property Main.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = XitBTN.MouseIcon
 		
 	End Sub

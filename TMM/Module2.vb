@@ -21,9 +21,9 @@ Module Console_Engine
 		Dim XtrA As Object
 		Dim passwordik As String
 		On Error GoTo ass
-		'UPGRADE_WARNING: Couldn't resolve default property of object XtrA. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+		'UPGRADE_WARNING: Couldn't resolve default property of object XtrA. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		XtrA = GetSetting("Harley Software", "Jooky-Viewer", "GOD_Mode")
-		'UPGRADE_WARNING: Couldn't resolve default property of object XtrA. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+		'UPGRADE_WARNING: Couldn't resolve default property of object XtrA. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 		If XtrA <> "1" Then
 			MsgBox("Nemáš zapnutý tzv. 'GOD mód', ten je potøeba pro vstup do tajné sekce !!!", MsgBoxStyle.Exclamation, "The Secret Section")
 			Exit Sub

@@ -33,7 +33,7 @@ Friend Class Console
 		PlaySound(13)
 		Text1.Text = UCase("unload me")
 		MsgBox("Nemùžeš zavøít konzoli !!!" & Chr(10) & "Pøíkazem 'UNLOAD ME' se zavøe celý DiskMag")
-		'UPGRADE_ISSUE: Event parameter Cancel was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="FB723E3C-1C06-4D2B-B083-E6CD0D334DA8"'
+		'UPGRADE_ISSUE: Event parameter Cancel was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="FB723E3C-1C06-4D2B-B083-E6CD0D334DA8"'
 		Cancel = True
 	End Sub
 	
@@ -101,16 +101,16 @@ Friend Class Console
 					Help.Show()
 				Case "god mode on"
 					MsgBox("Tento pøíkaz je urèen pro aktivování tzv. 'GOD módu', pokud jsi k tomu oprávnìn, tak zadej heslo !!!!", MsgBoxStyle.Exclamation, "!!! WARNING !!!")
-					'UPGRADE_WARNING: Couldn't resolve default property of object passwordicek. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+					'UPGRADE_WARNING: Couldn't resolve default property of object passwordicek. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 					passwordicek = LCase(InputBox("Pro pro aktivování 'GOD módu' je nutno nejprve vložit heslo !!!", "Activating 'GOD mode'"))
-					'UPGRADE_WARNING: Couldn't resolve default property of object passwordicek. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+					'UPGRADE_WARNING: Couldn't resolve default property of object passwordicek. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 					If LCase(passwordicek) = ReadIniFile("ini\main.ini", "Common", "Heslo") Then SaveSetting("Harley Software", "Jooky-Viewer", "GOD_Mode", "1")
 					MsgBox("Nyní zadej své jméno ...", MsgBoxStyle.Exclamation, "!!! WARNING !!!")
 					SaveSetting("Harley Software", "Jooky-Viewer", "User_Name", InputBox("Zadej své jméno :", "Activating 'GOD mode'"))
-					'UPGRADE_WARNING: Couldn't resolve default property of object XtrA. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+					'UPGRADE_WARNING: Couldn't resolve default property of object XtrA. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 					XtrA = GetSetting("Harley Software", "Jooky-Viewer", "GOD_Mode")
 					User = GetSetting("Harley Software", "Jooky-Viewer", "User_Name")
-					'UPGRADE_WARNING: Couldn't resolve default property of object XtrA. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
+					'UPGRADE_WARNING: Couldn't resolve default property of object XtrA. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="6A50421D-15FE-4896-8A1B-2EC21E9037B2"'
 					If XtrA = "1" Then
 						Main_Renamed.Usr.Visible = True
 						Main_Renamed.Usr.Text = "GOD Mode ON" & Chr(10) & "User : " & User
@@ -156,10 +156,10 @@ Friend Class Console
 		Dim Shift As Short = System.Windows.Forms.Control.ModifierKeys \ &H10000
 		Dim X As Single = VB6.PixelsToTwipsX(eventArgs.X)
 		Dim Y As Single = VB6.PixelsToTwipsY(eventArgs.Y)
-		'UPGRADE_ISSUE: Form property Console.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property Console.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: RichTextLib.RichTextBox property LOGboX.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property Console.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: RichTextLib.RichTextBox property LOGboX.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property Console.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = LOGboX.MouseIcon
 		
 	End Sub

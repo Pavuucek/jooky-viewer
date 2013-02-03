@@ -42,10 +42,10 @@ Friend Class List
 		Future.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Back.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Bux.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
@@ -88,10 +88,10 @@ Friend Class List
 		Future.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Back.ForeColor = System.Drawing.ColorTranslator.FromOle(&HC000C0)
 		Bux.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
@@ -127,10 +127,10 @@ Friend Class List
 		Future.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Back.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Bux.ForeColor = System.Drawing.ColorTranslator.FromOle(&HC000C0)
-		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
@@ -171,10 +171,10 @@ Friend Class List
 		Future.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Back.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Bux.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
@@ -251,10 +251,10 @@ Friend Class List
 		Future.ForeColor = System.Drawing.ColorTranslator.FromOle(&HC000C0)
 		Back.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Bux.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
@@ -326,10 +326,10 @@ Friend Class List
 		Future.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Back.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Bux.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
@@ -370,10 +370,10 @@ Friend Class List
 		Future.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Back.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Bux.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
@@ -409,10 +409,10 @@ Friend Class List
 		Future.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Back.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Bux.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
@@ -449,10 +449,10 @@ Friend Class List
 		Future.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Back.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Bux.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
@@ -509,10 +509,10 @@ Friend Class List
 		Future.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Back.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Bux.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
@@ -553,10 +553,10 @@ Friend Class List
 		Future.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Back.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Bux.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
@@ -590,10 +590,10 @@ Friend Class List
 		Future.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Back.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Bux.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
@@ -636,10 +636,10 @@ Friend Class List
 		Future.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Back.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Bux.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
@@ -676,10 +676,10 @@ Friend Class List
 		Future.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Back.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Bux.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
@@ -716,10 +716,10 @@ Friend Class List
 		Future.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Back.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
 		Bux.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)
-		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		
 	End Sub
@@ -742,10 +742,10 @@ Friend Class List
 		Dim Shift As Short = System.Windows.Forms.Control.ModifierKeys \ &H10000
 		Dim X As Single = VB6.PixelsToTwipsX(eventArgs.X)
 		Dim Y As Single = VB6.PixelsToTwipsY(eventArgs.Y)
-		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
+		'UPGRADE_ISSUE: Form property List.MousePointer does not support custom mousepointers. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="45116EAB-7060-405E-8ABE-9DBB40DC2E86"'
 		Me.Cursor = vbCustom
-		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
-		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSExpressCC.v80/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Image property XitBTN.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
+		'UPGRADE_ISSUE: Form property List.MouseIcon was not upgraded. Click for more: 'ms-help://MS.VSCC.v90/dv_commoner/local/redirect.htm?keyword="CC4C7EC0-C903-48FC-ACCC-81861D12DA4A"'
 		Me.MouseIcon = Main_Renamed.XitBTN.MouseIcon
 		Uvodnik.ForeColor = System.Drawing.ColorTranslator.FromOle(&HC000C0)
 		PCGamez.ForeColor = System.Drawing.ColorTranslator.FromOle(&HFFFF)

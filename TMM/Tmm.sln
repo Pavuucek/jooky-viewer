@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Basic Express 2005
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Tmm", "Tmm.vbproj", "{24959B6F-7E26-48D0-9F60-EE574CA79042}"
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Basic Express 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Tmm", "Tmm.vbproj", "{156D1707-BBDE-462F-8713-B2AF455F5E09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{24959B6F-7E26-48D0-9F60-EE574CA79042}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24959B6F-7E26-48D0-9F60-EE574CA79042}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24959B6F-7E26-48D0-9F60-EE574CA79042}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24959B6F-7E26-48D0-9F60-EE574CA79042}.Release|Any CPU.Build.0 = Release|Any CPU
+		{156D1707-BBDE-462F-8713-B2AF455F5E09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{156D1707-BBDE-462F-8713-B2AF455F5E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{156D1707-BBDE-462F-8713-B2AF455F5E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{156D1707-BBDE-462F-8713-B2AF455F5E09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -90,6 +90,7 @@
 		Me.Frame1.ForeColor = System.Drawing.SystemColors.ControlText
 		Me.Frame1.RightToLeft = System.Windows.Forms.RightToLeft.No
 		Me.Frame1.Visible = True
+		Me.Frame1.Padding = New System.Windows.Forms.Padding(0)
 		Me.Frame1.Name = "Frame1"
 		Me.Image1.Size = New System.Drawing.Size(122, 90)
 		Me.Image1.Location = New System.Drawing.Point(368, 176)
