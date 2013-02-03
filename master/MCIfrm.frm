@@ -254,14 +254,6 @@ Private Sub MMControl1_Done(NotifyCode As Integer)
 
 End Sub
 
-Private Sub PrNseTuP_Click()
-PlaySound 11
-ConsoleWrite "CONTROLPANEL.printersetup"
-CommonDialog1.Flags = &H40
-CommonDialog1.ShowPrinter
-End Sub
-
-
 Private Sub PrNseTuP_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
 PrNseTuP.ForeColor = &HC000C0
 CloseB.ForeColor = &HFFFF&
@@ -269,25 +261,10 @@ End Sub
 
 
 Private Sub Timer1_Timer()
-Me.Top = Me.Top + 300
-If Me.Top >= 1300 Then
-  Me.Top = 1350
-  ConsoleWrite "CONTROLPANEL.init"
-  Timer1.Enabled = False
-End If
 End Sub
 
 
 Private Sub Timer2_Timer()
-Me.Top = Me.Top - 300
-If Me.Top <= -5000 Then
-  Me.Hide
-  Me.Enabled = False
-  Main.Enabled = True
-  Main.Show
-  ConsoleWrite "CONTROLPANEL.uninit"
-  Timer2.Enabled = False
-End If
 End Sub
 
 
@@ -306,12 +283,8 @@ End Sub
 
 
 Private Sub SldWave_Change()
-ConsoleWrite "PLAYER.ChangeWaveVolume=" & SldWave.Value
-'wavehlas = waveOutSetVolume(2, 65000 - (6500 * SldWave.Value))
 End Sub
 
 Private Sub Slider1_Change()
-ConsoleWrite "PLAYER.ChangeMidiVolume=" & Slider1.Value
-'hlas = midiOutSetVolume(2, 65000 - (Slider1.Value * 6500))
 End Sub
 

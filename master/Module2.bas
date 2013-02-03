@@ -17,6 +17,7 @@ GoTo 2
 End Function
 
 Sub Maskot()
+Dim XtrA, passwordik As String
 On Error GoTo ass
 XtrA = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="GOD_Mode")
 If XtrA <> "1" Then

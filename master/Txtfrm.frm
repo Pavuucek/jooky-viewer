@@ -70,14 +70,12 @@ Begin VB.Form TextFRM
       _Version        =   393217
       BackColor       =   16777215
       BorderStyle     =   0
-      Enabled         =   -1  'True
       HideSelection   =   0   'False
       ReadOnly        =   -1  'True
       ScrollBars      =   3
       MousePointer    =   99
       RightMargin     =   800
-      TextRTF         =   $"Txtfrm.frx":0000
-      MouseIcon       =   "Txtfrm.frx":012A
+      MouseIcon       =   "Txtfrm.frx":0000
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "MS Sans Serif"
          Size            =   9.75
@@ -204,6 +202,7 @@ Attribute VB_Creatable = False
 Attribute VB_Exposed = False
 Option Explicit
 Private Sub Back4_Click()
+Dim em, wdw As String
 PlaySound 11
 em = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="EditMode")
 wdw = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="Window")
@@ -223,10 +222,8 @@ End Sub
 
 
 Private Sub File1_Click()
-PlaySound 11
-RichTextBox1.filename = "data\text\" & File1.filename
-Fil = File1.filename
 End Sub
+
 
 
 Private Sub Back4_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
@@ -239,6 +236,7 @@ Me.MouseIcon = Main.XitBTN.MouseIcon
 End Sub
 
 Private Sub Form_Load()
+Dim em, makx, uhc, mohc As String
 On Error GoTo 1
 DrawBckGround Me, "TextViewer", True
 em = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="EditMode")
@@ -349,6 +347,7 @@ End Sub
 
 
 Private Sub List1_Click()
+Dim makz As String
 On Error GoTo 1
 PlaySound 11
 WaitFRM.Show
@@ -391,6 +390,7 @@ End Sub
 
 
 Private Sub Pix_Click()
+Dim makx As String
 On Error GoTo 1
 PlaySound 11
 makx = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="Window")
@@ -425,6 +425,7 @@ End Sub
 
 
 Private Sub PrN_Click()
+Dim wdw, NaM As String
 PlaySound 11
 wdw = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="Window")
 NaM = InputBox("Zadej jméno nového èlánku v sekci " & wdw & ".", wdw)

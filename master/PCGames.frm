@@ -287,30 +287,10 @@ Me.MouseIcon = Main.XitBTN.MouseIcon
 End Sub
 
 Private Sub Timer1_Timer()
-Me.Height = Me.Height + 100
-Me.Width = Me.Width + 100
-If Me.Height >= 2800 Then
-  Me.Height = 2850
-End If
-If Me.Width >= 1600 Then
-  Me.Height = 2850
-  Me.Width = 1680
-  Timer2.Enabled = False
-  Timer1.Enabled = False
-End If
 End Sub
 
 
 Private Sub Timer2_Timer()
-Me.Height = Me.Height - 100
-Me.Width = Me.Width - 100
-If Me.Height <= 410 And Me.Width <= 700 Then
-  Me.Height = 10
-  Me.Width = 10
-  Unload Me
-  Timer1.Enabled = False
-  Timer2.Enabled = False
-End If
 End Sub
 
 

@@ -160,12 +160,13 @@ End Sub
 
 
 Private Sub File1_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Dim res As String
 Back6.ForeColor = &HFFFF&
-If Screen.Width = 9600 And Screen.Height = 7200 Then Re$ = "640x480"
-If Screen.Width = 12000 And Screen.Height = 9000 Then Re$ = "800x600"
-If Screen.Width >= 15360 And Screen.Height >= 11520 Then Re$ = "1024x768"
+If Screen.Width = 9600 And Screen.Height = 7200 Then res = "640x480"
+If Screen.Width = 12000 And Screen.Height = 9000 Then res = "800x600"
+If Screen.Width >= 15360 And Screen.Height >= 11520 Then res = "1024x768"
 
-Select Case Re$
+Select Case res
 Case "640x480"
   ActiveMovie1.Height = 361
   ActiveMovie1.Width = 640
@@ -184,11 +185,12 @@ End Sub
 
 
 Private Sub Form_Activate()
-If Screen.Width = 9600 And Screen.Height = 7200 Then Re$ = "640x480"
-If Screen.Width = 12000 And Screen.Height = 9000 Then Re$ = "800x600"
-If Screen.Width >= 15360 And Screen.Height >= 11520 Then Re$ = "1024x768"
+Dim res As String
+If Screen.Width = 9600 And Screen.Height = 7200 Then res = "640x480"
+If Screen.Width = 12000 And Screen.Height = 9000 Then res = "800x600"
+If Screen.Width >= 15360 And Screen.Height >= 11520 Then res = "1024x768"
 
-Select Case Re$
+Select Case res
 Case "640x480"
   ActiveMovie1.Height = 361 - CaP.Height - 2
   ActiveMovie1.Width = 640
@@ -207,13 +209,13 @@ End Sub
 
 Private Sub Form_Load()
 On Error GoTo 1
-Dim Re$
+Dim res
 ConsoleWrite "PLAYER.init"
-If Screen.Width = 9600 And Screen.Height = 7200 Then Re$ = "640x480"
-If Screen.Width = 12000 And Screen.Height = 9000 Then Re$ = "800x600"
-If Screen.Width >= 15360 And Screen.Height >= 11520 Then Re$ = "1024x768"
+If Screen.Width = 9600 And Screen.Height = 7200 Then res = "640x480"
+If Screen.Width = 12000 And Screen.Height = 9000 Then res = "800x600"
+If Screen.Width >= 15360 And Screen.Height >= 11520 Then res = "1024x768"
 
-Select Case Re$
+Select Case res
 Case "640x480"
   ActiveMovie1.Height = 361 - CaP.Height - 2
   ActiveMovie1.Width = 640
@@ -245,12 +247,13 @@ End Sub
 
 
 Private Sub Form_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Dim res As String
 Back6.ForeColor = &HFFFF&
-If Screen.Width = 9600 And Screen.Height = 7200 Then Re$ = "640x480"
-If Screen.Width = 12000 And Screen.Height = 9000 Then Re$ = "800x600"
-If Screen.Width >= 15360 And Screen.Height >= 11520 Then Re$ = "1024x768"
+If Screen.Width = 9600 And Screen.Height = 7200 Then res = "640x480"
+If Screen.Width = 12000 And Screen.Height = 9000 Then res = "800x600"
+If Screen.Width >= 15360 And Screen.Height >= 11520 Then res = "1024x768"
 
-Select Case Re$
+Select Case res
 Case "640x480"
   ActiveMovie1.Height = 361
   ActiveMovie1.Width = 640
@@ -280,10 +283,6 @@ End Sub
 
 
 Private Sub Option1_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-Back6.ForeColor = &HFFFF&
-Option1.ForeColor = &HC000C0
-Option2.ForeColor = &HFFFF&
-
 End Sub
 
 
@@ -300,9 +299,6 @@ End Sub
 
 
 Private Sub Option2_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-Back6.ForeColor = &HFFFF&
-Option2.ForeColor = &HC000C0
-Option1.ForeColor = &HFFFF&
 End Sub
 
 
@@ -317,12 +313,13 @@ End Sub
 
 
 Private Sub imgbackground_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+Dim res As String
 Back6.ForeColor = &HFFFF&
-If Screen.Width = 9600 And Screen.Height = 7200 Then Re$ = "640x480"
-If Screen.Width = 12000 And Screen.Height = 9000 Then Re$ = "800x600"
-If Screen.Width >= 15360 And Screen.Height >= 11520 Then Re$ = "1024x768"
+If Screen.Width = 9600 And Screen.Height = 7200 Then res = "640x480"
+If Screen.Width = 12000 And Screen.Height = 9000 Then res = "800x600"
+If Screen.Width >= 15360 And Screen.Height >= 11520 Then res = "1024x768"
 
-Select Case Re$
+Select Case res
 Case "640x480"
   ActiveMovie1.Height = 361
   ActiveMovie1.Width = 640

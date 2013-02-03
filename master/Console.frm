@@ -57,7 +57,6 @@ Begin VB.Form Console
       _ExtentY        =   5318
       _Version        =   393217
       BackColor       =   0
-      Enabled         =   -1  'True
       ReadOnly        =   -1  'True
       ScrollBars      =   2
       MousePointer    =   99
@@ -120,6 +119,7 @@ End Sub
 Private Sub Text1_KeyPress(KeyAscii As Integer)
 On Error GoTo 1
 Dim cmd As Variant
+Dim passwordicek, XtrA, User As String
 If KeyAscii = vbKeyReturn Then
   LOGboX.Text = LOGboX.Text & Chr(10) & "Command: " & UCase(Text1.Text)
   Select Case LCase(Text1.Text)
@@ -169,10 +169,10 @@ If KeyAscii = vbKeyReturn Then
     MsgBox Title:="!!! WARNING !!!", prompt:="Nyní zadej své jméno ...", Buttons:=vbExclamation
     SaveSetting appname:="Harley Software", section:="Jooky-Viewer", Key:="User_Name", setting:=InputBox("Zadej své jméno :", "Activating 'GOD mode'")
     XtrA = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="GOD_Mode")
-    UsEr = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="User_Name")
+    User = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="User_Name")
     If XtrA = "1" Then
       Main.Usr.Visible = True
-      Main.Usr.Caption = "GOD Mode ON" & Chr(10) & "User : " & UsEr
+      Main.Usr.Caption = "GOD Mode ON" & Chr(10) & "User : " & User
       Main.Usr.Left = Main.XitBTN.Left + Main.XitBTN.Width - Main.Usr.Width - 5
       Main.Usr.Top = Main.NuMx.Top + Main.NuMx.Height + 3
     End If

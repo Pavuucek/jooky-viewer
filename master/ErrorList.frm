@@ -26,6 +26,7 @@ Begin VB.Form ErrorList
       _ExtentX        =   11668
       _ExtentY        =   7435
       _Version        =   393217
+      Enabled         =   -1  'True
       ReadOnly        =   -1  'True
       ScrollBars      =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -45,6 +46,7 @@ Attribute VB_Exposed = False
 Option Explicit
 
 Private Sub Form_Load()
+Dim MsgText As String
 WaitFRM.Show
 DoEvents
 CenterForm Me

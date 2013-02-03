@@ -257,12 +257,13 @@ NuMx.Left = XitBTN.Left + XitBTN.Width - NuMx.Width - 5
 End Sub
 
 Private Sub Form_Load()
+Dim numero As Integer
 On Error GoTo 1
 'TempDir = Environ("temp") & "\Jooky_$_"
 'CreateTemp
 SaveSetting appname:="Harley Software", section:="Jooky-Viewer", Key:="EditMode", setting:="0"
 Dim XtrA
-Dim UsEr
+Dim User
 Dim VaLuEE As Integer
 Dim SuP As String
 frmSplash.progressbar1.Value = 0
@@ -280,10 +281,10 @@ imgtitle.Visible = True
 imgtitle.Top = 0
 imgtitle.Left = 0
 'Image1.Top = imgtitle.Top + imgtitle.Height
-Dim Re$
+Dim res
 Select Case LCase(DetRes)
   Case "640x480", "800x600", "1024x768"
-    Re$ = DetRes
+    res = DetRes
   Case "less"
     MsgBox prompt:="Máš nastavené moc MALÉ rozlišení Plochy, skus jedno z tìchto : 640x480, 800x600, 1024x768" & Chr(10) & "BALIM TO !!!", Buttons:=vbInformation
     End
@@ -325,7 +326,7 @@ Usr.Visible = False
 VaLuEE = False
 If XtrA = "1" Then
   Usr.Visible = True
-  Usr.Caption = "GOD Mode ON" & Chr(10) & "User : " & UsEr
+  Usr.Caption = "GOD Mode ON" & Chr(10) & "User : " & User
   VaLuEE = True
 End If
 PlaySound 12
@@ -382,11 +383,11 @@ ConsoleWrite "StartDate=" & Date
 ConsoleWrite "StartTime=" & Time
 ConsoleWrite "StartSubject=" & Main.Caption
 ConsoleWrite "StartMusic=" & UCase(MCIfrm.AMOVIE1.filename)
-ConsoleWrite "StartResolution=" & Re$
+ConsoleWrite "StartResolution=" & res
 frmSplash.progressbar1.Value = frmSplash.progressbar1.Value + 1
 If VaLuEE = True Then
   ConsoleWrite "StartGODmode=ON"
-  ConsoleWrite "StartUser=" & UsEr
+  ConsoleWrite "StartUser=" & User
 Else
   ConsoleWrite "StartGODmode=OFF"
   'ConsoleWrite "StartUser=" & UsEr
@@ -562,6 +563,7 @@ Private Sub Num_Click()
 End Sub
 
 Private Sub Secret_Click()
+Dim XtrA, passwordik As String
 On Error GoTo ass
 XtrA = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="GOD_Mode")
 If XtrA <> "1" Then

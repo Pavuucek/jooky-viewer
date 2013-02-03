@@ -36,17 +36,16 @@ Private Sub ContinueX_Click()
 End Sub
 
 Private Sub ContinueX_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
-ContinueX.ForeColor = &HFFFFFF
-ContinueX.BackColor = &HFF0000
 End Sub
 
 
 Private Sub Form_Click()
+Dim res, RexX, ReXTE As String
 On Error GoTo 1
-If Screen.Width = 9600 And Screen.Height = 7200 Then Re$ = "640x480"
-If Screen.Width = 12000 And Screen.Height = 9000 Then Re$ = "800x600"
-If Screen.Width >= 15360 And Screen.Height >= 11520 Then Re$ = "1024x768"
-Select Case Re$
+If Screen.Width = 9600 And Screen.Height = 7200 Then res = "640x480"
+If Screen.Width = 12000 And Screen.Height = 9000 Then res = "800x600"
+If Screen.Width >= 15360 And Screen.Height >= 11520 Then res = "1024x768"
+Select Case res
 Case "640x480"
   Image1.Height = 480
   Image1.Width = 640
@@ -87,13 +86,14 @@ GoTo 2
 End Sub
 
 Private Sub Form_Load()
+Dim res As String
 On Error GoTo 1
 WaitFRM.Show
 DoEvents
-If Screen.Width = 9600 And Screen.Height = 7200 Then Re$ = "640x480"
-If Screen.Width = 12000 And Screen.Height = 9000 Then Re$ = "800x600"
-If Screen.Width >= 15360 And Screen.Height >= 11520 Then Re$ = "1024x768"
-Select Case Re$
+If Screen.Width = 9600 And Screen.Height = 7200 Then res = "640x480"
+If Screen.Width = 12000 And Screen.Height = 9000 Then res = "800x600"
+If Screen.Width >= 15360 And Screen.Height >= 11520 Then res = "1024x768"
+Select Case res
 Case "640x480"
   Image1.Height = 480
   Image1.Width = 640
@@ -127,6 +127,7 @@ Me.MouseIcon = Main.XitBTN.MouseIcon
 End Sub
 
 Private Sub Image1_Click()
+Dim RexX, ReXTE As String
 On Error GoTo 1
 PlaySound 11
 RexX = ReadIniFile("ini\main.ini", "Common", "Last_Reklama")

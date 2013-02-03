@@ -149,19 +149,19 @@ End Sub
 
 Private Sub File1_Click()
 On Error GoTo 1
-Dim clX As String
+Dim clx, em As String
 PlaySound 11
 WaitFRM.Show
 DoEvents
 ConsoleWrite "PIXVIEWER.file=" & File1.filename
 Err.Clear
 Image1.Picture = LoadPicture(File1.Path & "\" & File1.filename)
-clX = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="Clanek")
+clx = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="Clanek")
 em = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="EditMode")
-If em = "1" And ReadIniFile("ini\main.ini", clX, File1.filename) = "" Then
+If em = "1" And ReadIniFile("ini\main.ini", clx, File1.filename) = "" Then
   PoPiSeK.Caption = "Klepnìte sem pro zadání popisku k obrázku"
 Else
-  PoPiSeK.Caption = ReadIniFile("ini\main.ini", clX, File1.filename)
+  PoPiSeK.Caption = ReadIniFile("ini\main.ini", clx, File1.filename)
 End If
 GoTo 2
 1:
@@ -185,13 +185,14 @@ Me.MouseIcon = Main.XitBTN.MouseIcon
 End Sub
 
 Private Sub Form_Activate()
+Dim res As String
 Image1.Top = Back.Top + 2
 Image1.Left = 0
-If Screen.Width = 9600 And Screen.Height = 7200 Then Re$ = "640x480"
-If Screen.Width = 12000 And Screen.Height = 9000 Then Re$ = "800x600"
-If Screen.Width >= 15360 And Screen.Height >= 11520 Then Re$ = "1024x768"
+If Screen.Width = 9600 And Screen.Height = 7200 Then res = "640x480"
+If Screen.Width = 12000 And Screen.Height = 9000 Then res = "800x600"
+If Screen.Width >= 15360 And Screen.Height >= 11520 Then res = "1024x768"
 Me.ScaleMode = vbPixels
-Select Case Re$
+Select Case res
 Case "640x480"
 Image1.Width = 640
 Image1.Height = 480 - Back.Top + 2
@@ -208,17 +209,18 @@ PoPiSeK.Width = Image1.Width - PoPiSeK.Left - 10
 End Sub
 
 Private Sub Form_Load()
+Dim res As String
 On Error GoTo 1
 Me.Icon = Main.Icon
 ConsoleWrite "PIXVIEWER.init"
 File1.Pattern = "*.BMP;*.JPG;*.GIF"
 Image1.Top = Back.Top + 2
 Image1.Left = 0
-If Screen.Width = 9600 And Screen.Height = 7200 Then Re$ = "640x480"
-If Screen.Width = 12000 And Screen.Height = 9000 Then Re$ = "800x600"
-If Screen.Width >= 15360 And Screen.Height >= 11520 Then Re$ = "1024x768"
+If Screen.Width = 9600 And Screen.Height = 7200 Then res = "640x480"
+If Screen.Width = 12000 And Screen.Height = 9000 Then res = "800x600"
+If Screen.Width >= 15360 And Screen.Height >= 11520 Then res = "1024x768"
 Me.ScaleMode = vbPixels
-Select Case Re$
+Select Case res
 Case "640x480"
 Image1.Width = 640
 Image1.Height = 480 - Back.Top + 2
@@ -260,12 +262,13 @@ Me.MousePointer = vbDefault
 End Sub
 
 Private Sub PoPiSeK_Click()
-clX = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="Clanek")
+Dim clx, em, ib As String
+clx = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="Clanek")
 em = GetSetting(appname:="Harley Software", section:="Jooky-Viewer", Key:="EditMode")
 If em = "1" Then
-  ib = InputBox("Zadej popisek k obrázku...", clX)
+  ib = InputBox("Zadej popisek k obrázku...", clx)
   PoPiSeK.Caption = ib
-  WriteIniFile "ini\main.ini", clX, File1.filename, ib
+  WriteIniFile "ini\main.ini", clx, File1.filename, ib
 End If
 End Sub
 

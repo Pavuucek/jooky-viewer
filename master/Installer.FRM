@@ -106,9 +106,9 @@ Begin VB.Form Installer
       _ExtentY        =   5106
       _Version        =   393217
       BackColor       =   16777215
+      Enabled         =   -1  'True
       ReadOnly        =   -1  'True
       ScrollBars      =   3
-      TextRTF         =   $"Installer.frx":0442
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "MS Sans Serif"
          Size            =   9.75
@@ -180,8 +180,6 @@ End Sub
 
 
 Private Sub dir1_Change()
-
-pthz = dir1.Path
 End Sub
 
 Private Sub dir1_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
@@ -192,14 +190,6 @@ End Sub
 
 
 Private Sub drive1_Change()
-On Error GoTo 1
-dir1.Path = drive1.Drive
-1:
-If Err.Number = 68 Then
-  MsgBox Title:="DRIVE ERROR WARNING", prompt:="Disk není pøipraven, nebo s nim nìco je, udìlej s tim nìco. Až zmáèkneš OK, tak se pokusim nastavit disk C:"
-  drive1.Drive = "c:"
-  Resume
-End If
 End Sub
 
 Private Sub File1_Click()
@@ -249,25 +239,10 @@ End Sub
 
 
 Private Sub Timer1_Timer()
-Installer.Left = Installer.Left + 300
-If Installer.Left >= 100 Then
-  Installer.Left = 105
-  Timer1.Enabled = False
-End If
 End Sub
 
 
 Private Sub Timer2_Timer()
-Installer.Left = Installer.Left - 300
-If Installer.Left <= -10000 Then
-  Me.Left = -10000
-  Unload Me
-  Main.Enabled = True
-  Main.Show
-  Timer1.Enabled = False
-  Timer2.Enabled = False
-  ConsoleWrite "INSTALLER.uninit"
-End If
 End Sub
 
 
