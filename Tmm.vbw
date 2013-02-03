@@ -1,8 +1,8 @@
 Main = 0, 0, 0, 0, C, 88, 116, 1015, 564, C
-Main_Engine = 0, 0, 0, 0, C
-Console_Engine = 0, 0, 0, 0, C
-Jooky00 = 0, 0, 0, 0, C
-DataFile = 0, 0, 0, 0, C
+Main_Engine = 88, 116, 1015, 564, C
+Console_Engine = 22, 29, 949, 477, C
+Jooky00 = 66, 87, 993, 535, C
+DataFile = 44, 58, 971, 506, C
 PixFRM = 0, 0, 0, 0, C, 110, 145, 1037, 593, C
 Help = 0, 0, 0, 0, C, 132, 174, 1059, 622, C
 TextFRM = 0, 0, 0, 0, C, 154, 203, 1081, 651, C
