@@ -1,0 +1,7 @@
+c:\tmm\obj\Debug\Interop.AMovie.dll
+c:\tmm\obj\Debug\Interop.ComctlLib.dll
+c:\tmm\obj\Debug\Interop.MCI.dll
+c:\tmm\obj\Debug\AxInterop.AMovie.dll
+c:\tmm\obj\Debug\AxInterop.ComctlLib.dll
+c:\tmm\obj\Debug\AxInterop.MCI.dll
+c:\tmm\obj\Debug\Tmm.vbproj.ResolveComReference.cache
