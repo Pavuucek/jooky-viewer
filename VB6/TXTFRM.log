@@ -1,0 +1,14 @@
+Line 63: Class ComctlLib.ProgressBar of control ProgressBar1 was not a loaded control class.
+Line 161: Class RichTextLib.RichTextBox of control RichTextBox1 was not a loaded control class.
+Line 70: The property name _ExtentX in ProgressBar1 is invalid.
+Line 71: The property name _ExtentY in ProgressBar1 is invalid.
+Line 72: The property name _Version in ProgressBar1 is invalid.
+Line 75: The property name Max in ProgressBar1 is invalid.
+Line 167: The property name _ExtentX in RichTextBox1 is invalid.
+Line 168: The property name _ExtentY in RichTextBox1 is invalid.
+Line 169: The property name _Version in RichTextBox1 is invalid.
+Line 173: The property name ReadOnly in RichTextBox1 is invalid.
+Line 174: The property name ScrollBars in RichTextBox1 is invalid.
+Line 176: The property name RightMargin in RichTextBox1 is invalid.
+Line 177: The property name TextRTF in RichTextBox1 is invalid.
+Line 161: Property MouseIcon in RichTextBox1 could not be set.

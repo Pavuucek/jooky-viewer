@@ -1,0 +1,454 @@
+Pro Visual Basic 3.0, 4.0 i 5.0:
+
+Sub Pause(ByVal nSecond As Single)
+  Dim t0 As Single
+  Dim dummy As Integer
+
+  t0 = Timer
+  Do While Timer - t0 < nSecond
+    dummy = DoEvents()
+    If Timer < t0 Then
+      t0 = t0 - 24 * 3600
+    End If
+   Loop
+End Sub
+
+Volání:
+
+Call Pause(poèet sekund)
+Msgbox "Ahoj"
+
+
+
+PREHRAVANI AVI V PICTUREBOXU
+Urèitì jste ji nìkdy vytváøeli nìjakı multimediální program a potøebovali jste pøehrát AVI soubor v nìjakém objektu formuláøe. Náš kód vám to umoní. Postupujte podle následujícího návodu.
+
+Vytvoøte formuláø(Form1),tlaèítko(Command1),picture box(Picture1) a multimediální ovládací prvek(MMControl1). Pak zkopírujte následující kód.
+Pozor: ScaleMode formuláøe musíte nastavit nastavit na 3 - pixels
+
+Deklarace: 
+Type RECT
+      Left As Long
+      Top As Long
+      Right As Long
+      Bottom As Long
+End Type
+
+Type MCI_OVLY_RECT_PARMS
+      dwCallback As Long
+      rc As RECT
+End Type
+
+Global Const MCI_OVLY_WHERE_SOURCE = &H20000
+Global Const MCI_OVLY_WHERE_DESTINATION = &H40000
+Global Const MCI_WHERE = &H843
+
+Declare Function mciSendCommand Lib "winmm.dll" Alias "mciSendCommandA"_
+ (ByVal wDeviceID As Long, ByVal uMessage As Long, ByVal dwParam1 As Long, dwParam2 As Any)_
+ As Long
+
+Declare Function mciGetErrorString Lib "winmm.dll" Alias "mciGetErrorStringA"_
+ (ByVal dwError As Long, ByVal lpstrBuffer As String, ByVal uLength As Long) As Long
+Volání: 
+Private Sub Command1_Click()
+      Const MB_OK = 0
+      Const MB_ICONSTOP = 16
+
+      Dim Retval&, Buffer$
+      Dim dwParam2 As MCI_OVLY_RECT_PARMS
+
+      MMControl1.Command = "Close"
+      MMControl1.filename = "C:\temp\2.avi"
+
+      MMControl1.hWndDisplay = Picture1.hWnd
+
+      MMControl1.Command = "Open"
+
+      dwParam2.dwCallback = MMControl1.hWnd
+      dwParam2.rc.Left = 0
+      dwParam2.rc.Top = 0
+      dwParam2.rc.Right = 0
+      dwParam2.rc.Bottom = 0
+
+      Retval& = mciSendCommand(MMControl1.DeviceID, MCI_WHERE, MCI_OVLY_WHERE_SOURCE, dwParam2)
+
+      If Retval& <> 0 Then
+         Buffer$ = Space$(100)
+         Retval& = mciGetErrorString(Retval&, Buffer$, Len(Buffer$))
+         MsgBox Trim$(Buffer$), MB_OK + MB_ICONSTOP, "ERROR"
+      Else
+         Picture1.Width = dwParam2.rc.Right - dwParam2.rc.Left
+         Picture1.Height = dwParam2.rc.Bottom - dwParam2.rc.Top
+
+         MMControl1.Wait = True
+         MMControl1.Command = "play"
+         MMControl1.Command = "close"
+      End If
+End Sub
+
+
+HYPERTEXT
+Zde je navod jak vytvorit aktivni www odkaz, bez pouziti ocx komponenty, pouze volanim funkce v shell32.dll
+
+Do standartniho modulu vlozte tento radek:
+Declare Function ShellExecute Lib "shell32.dll" Alias "ShellExecuteA" (ByVal hwnd As Long, ByVal lpOperation As String, ByVal lpFile As String, ByVal lpParameters As String, ByVal lpDirectory As String, ByVal nShowCmd As Long)As Long
+Ted treba do form1 vlozte napriklad ramecek Frame1 a do nej napiste www adresu kterou budete chtit aktivovat. Nyni do OnClick vlastnosti ramecku Frame1 vlozte tento kod: 
+ShellExecute frame1.hwnd, "open", "http://vaseadresasem","","",1 (kde 1 je pro standartni okno)
+Takhle snadno muzete do svych projektu vkladat aktivni odkazy, na vase www stranky, ktere se prostym kliknutim aktivuji v aktualne nastavenem prohlizeci. Preju krasny den.....
+
+Tento tip dodal: Pavel Kudrys
+
+
+PREHRAVANI WAV
+Je to jednoduché. Vytvoøíte si modul a do nìj pøekopírujete následující øádku
+
+Pro Visual Basic 3.0:
+Declare Function sndPlaySound Lib "MMSYSTEM.DLL" (ByVal WavFile As Any, ByVal wFlags As Integer) As Integer
+
+Pro Visual basic 5.0:
+Declare Function sndPlaySound Lib "Winmm.DLL" Alias "sndPlaySoundA" (ByVal WavFile As Any, ByVal wFlags As Integer) As Integer
+
+Volání:
+x = sndPlaySound("tada.wav",0)
+
+
+DETEKCE ZVUOVKY
+Je to jednoduché. Vytvoøíte si modul a do nìj pøekopírujete následující øádku
+
+Pro Visual Basic 3.0: - není zaruèené
+Declare Function auxGetNumDevs% Lib "MMSYSTEM" ()
+
+Pro Visual basic 5.0:
+Declare Function auxGetNumDevs% Lib "winmm.dll" ()
+
+Volání:
+i = auxGetNumDevs
+
+Kdy je i > 0 - v systému je pøítomné nìjaké zvukové zaøízení.
+
+Kdy ne - v systému není pøítomné ádné zvukové zaøízení.
+
+
+ANIMOVANE KURZORY
+Do generalu dáte:
+Option Explicit
+
+'Nahrává kurzor
+Private Declare Function LoadCursorFromFile Lib "user32" Alias "LoadCursorFromFileA" (ByVal lpFileName As String) As Long
+
+'Mìní informace tøídy
+Private Declare Function SetClassLong Lib "user32" Alias "SetClassLongA" (ByVal hwnd As Long, ByVal nIndex As Long, ByVal dwNewlong As Long) As Long
+
+Private Const GCL_HCURSOR = (-12)
+Private hOldCursor As Long
+
+Volání:
+Private Sub Form_Load()
+  Dim hnewCursor As Long
+  hnewCursor = LoadCursorFromFile("cesta ke kurzoru")
+  hOldCursor = SetClassLong(Form1.hwnd, GCL_HCURSOR, hnewCursor)
+End Sub
+
+Private Sub Form_Unload(Cancel As Integer)
+  hOldCursor = SetClassLong(Form1.hwnd, GCL_HCURSOR, hOldCursor)
+End Sub
+
+
+BEH APLIKACE
+Staèí pøidat tyto øádky
+
+Sub Form_Load () 
+   If App.PrevInstance Then
+      MsgBox App.EXEName & " ji bìí!", 4096, "Varování"      
+      End
+   End If  
+End Sub
+
+
+JAK WINDOWS NASTARTOVALI
+Deklarace: 
+Option Explicit
+Public Declare Function GetSystemMetrics Lib "user32" (ByVal nIndex As Long) As Long
+Public Const SM_CLEANBOOT = 67
+Volání: 
+Select Case GetSystemMetrics(SM_CLEANBOOT)
+     Case 1
+       MsgBox "Systém nastartoval v nouzovém reimu."
+     Case 2
+       MsgBox "Systém nastartoval v nouzovém reimu se sítí."
+     Case Else
+       MsgBox "Systém nastartoval bez problémù."
+End Select
+
+
+VOLNA PAMET
+Jednoduchá deklarace, která zjistí poèet volné pamìti atd. Volání 
+Option Explicit
+
+Private Type MEMORYSTATUS
+    dwLength As Long
+    dwMemoryLoad As Long
+    dwTotalPhys As Long
+    dwAvailPhys As Long
+    dwTotalPageFile As Long
+    dwAvailPageFile As Long
+    dwTotalVirtual As Long
+    dwAvailVirtual As Long
+End Type
+
+Private Declare Sub GlobalMemoryStatus Lib "kernel32" (lpBuffer As MEMORYSTATUS)
+
+Const fmt As String = "###,###,###,###"
+Const skb As String = " Kb"
+Const nkb As Long = 1024
+
+
+
+Private Sub Form_Load()
+
+   Dim MS As MEMORYSTATUS
+   
+   MS.dwLength = Len(MS)
+   GlobalMemoryStatus MS
+   ' lbMemStat jsou vıstupní pole
+  'Hodnoty jsou dìleny 1024 (nkb)
+  'aby se získala velikost v Kb
+  'Vrátí èíslo v rozmezí od 0 do 100 - poèet procent vyuité pamìti
+   lbMemStat(0) = Format$(MS.dwMemoryLoad, fmt) & " % vyuitıch"
+   'Vrátí celkovı poèet fyzické pamìti
+   lbMemStat(1) = Format$(MS.dwTotalPhys / nkb, fmt) & skb
+   'Vrátí celkovı poèet fyzické volné pamìti
+   lbMemStat(2) = Format$(MS.dwAvailPhys / nkb, fmt) & skb
+   '???Indicates the total number of bytes that can be stored in the paging file.
+   'Note that this number does not represent the actual physical size of the paging file on disk.
+   lbMemStat(3) = Format$(MS.dwTotalPageFile / nkb, fmt) & skb
+   '???Indicates the number of bytes available in the paging file.
+   lbMemStat(4) = Format$(MS.dwAvailPageFile / nkb, fmt) & skb
+   'Indicates the total number of bytes that can be described in the user mode portion of the virtual address space of the calling process.
+   lbMemStat(5) = Format$(MS.dwTotalVirtual / nkb, fmt) & skb
+   'Indicates the number of bytes of unreserved and uncommitted memory in the user mode portion of the virtual address space of the calling process.
+   lbMemStat(6) = Format$(MS.dwAvailVirtual / nkb, fmt) & skb
+
+End Sub
+
+
+VOLNE MÍSTO NA HADRU
+Tyto jednoduché API deklarace zjistí volné a celkové místo na disku.
+
+Pozor !!!
+Existují dva zpùsoby deklarací. První je pro normální FAT systém. Druhı je pro systém FAT32 neboli pro partitiony pøesahující 2GB - pouze ve Windows95 OSR2
+
+První zpùsob
+Deklarace: 
+Declare Function GetDiskFreeSpace Lib "kernel32" Alias "GetDiskFreeSpaceA"_
+ (ByVal lpRootPathName As String, lpSectorsPerCluster As Long, lpBytesPerSector As Long,_
+ lpNumberOfFreeClusters As Long, lpTtoalNumberOfClusters As Long) As Long
+Volání: 
+  Dim numSectorsPerCluster As Long
+  Dim numBytesPerSector As Long
+  Dim numFreeClusters As Long
+  Dim numTotalClusters As Long
+  Dim success As Boolean
+  
+  success = GetDiskFreeSpace("C:\", numSectorsPerCluster, numBytesPerSector, numFreeClusters, numTotalClusters)
+  free_space = numSectorsPerCluster * numBytesPerSector * numFreeClusters
+  total_space = numSectorsPerCluster * numBytesPerSector * numTotalClusters
+  MsgBox "Volné místo: " & free_space
+  MsgBox "Celkové místo: " & total_space
+Druhı zpùsob
+Deklarace: 
+Declare Function GetDiskFreeSpaceEx Lib "kernel32" Alias "GetDiskFreeSpaceExA"_
+(ByVal lpRootPathName As String, lpFreeBytesAvailableToCaller As Currency,_
+ lpTotalNumberOfBytes As Currency, lpTotalNumberOfFreeBytes As Currency) As Long
+Volání: 
+  Dim lpFreeBytesAvaibleToCaller As Currency
+  Dim lpTotalNumberOfBytes As Currency
+  Dim lpTotalNumberOfFreeBytes As Currency
+  
+  success2 = GetDiskFreeSpaceEx("C:\", lpFreeBytesAvaibleToCaller, lpTotalNumberOfBytes, lpTotalNumberOfFreeBytes)
+  MsgBox "Volné místo na FAT32: " & lpTotalNumberOfFreeBytes
+  MsgBox "Celkové místo na FAT32: " & lpTotalNumberOfBytes
+
+
+POUZITI SHELL32.DLL
+Knihovnu Shell32.dll lze pouít napøíklad k mazání souborù pomocí koše èi k pøesouváni, pøejmenování a 
+kopírování souborù. Musíte vytroøit novı modul a do nìj zkopírovat následující text: 
+Public Type SHFILEOPSTRUCT
+    hWnd        As Long
+    wFunc       As Long
+    pFrom       As String
+    pTo         As String
+    fFlags      As Integer
+    fAborted    As Boolean
+    hNameMaps   As Long
+    sProgress   As String
+End Type
+
+'funkce
+Public Const FO_MOVE As Long = &H1
+Public Const FO_COPY As Long = &H2
+Public Const FO_DELETE As Long = &H3
+Public Const FO_RENAME As Long = &H4
+
+'Flag
+Public Const FOF_MULTIDESTFILES As Long = &H1
+Public Const FOF_CONFIRMMOUSE As Long = &H2
+Public Const FOF_SILENT As Long = &H4
+Public Const FOF_RENAMEONCOLLISION As Long = &H8
+Public Const FOF_NOCONFIRMATION As Long = &H10
+Public Const FOF_WANTMAPPINGHANDLE As Long = &H20
+Public Const FOF_CREATEPROGRESSDLG As Long = &H0
+Public Const FOF_ALLOWUNDO As Long = &H40
+Public Const FOF_FILESONLY As Long = &H80
+Public Const FOF_SIMPLEPROGRESS As Long = &H100
+Public Const FOF_NOCONFIRMMKDIR As Long = &H200
+
+Public Declare Function SHFileOperation Lib "shell32.dll" Alias "SHFileOperationA" (lpFileOp As SHFILEOPSTRUCT) As Long
+Volání funkcí: 
+Dim SHFileOp As SHFILEOPSTRUCT
+Dim r As Long
+
+SHFileOp.pFrom = Filename
+SHFileOp.pTo = Destname
+SHFileOp.wFunc =  Sem pøijde funkce
+SHFileOp.fFlags = Sem pøijde flag
+r = SHFileOperation(SHFileOp)
+Vysvìtlení konstant: 
+FO_COPY Zkopíruje soubor(y) z pFrom do pTo
+FO_DELETE Smae soubor(y) v pFrom (pTo je ignorováno)
+FO_MOVE Pøesune soubor(y) z pFrom do pTo
+FO_RENAME Pøejmenuje soubor(y) z pFrom
+
+Flag
+FOF_ALLOWUNDO Pouito pøi mazání. Soubory jsou umístìny do koše
+FOF_CONFIRMMOUSE Není implementováno
+FOF_FILESONLY Provede operaci na souborech (kdy je specifikováno *.*)
+FOF_NOCONFIRMATION Odpoví ano na všechny otázky
+FOF_NOCONFIRMMKDIR Nepovolí vytvoøení nového adresáøe (kdy je potøeba)
+FOF_RENAMEONCOLLISION Pøejmenuje soubor na jinı, jestlie ji existuje
+FOF_SILENT Neukazuje progress dialog
+FOF_SIMPLEPROGRESS Ukáe progress dialog, lae nezobrazí jména souborù
+
+
+TYP JEDNOTKY
+Pomocí tìchto API funkcí zjistíte typ jednotky.
+
+Deklarace: 
+Option Explicit
+
+Public Declare Function GetLogicalDriveStrings Lib "kernel32" Alias "GetLogicalDriveStringsA" _
+(ByVal nBufferLength As Long, ByVal lpBuffer As String) As Long
+Public Declare Function GetDriveType Lib "kernel32" Alias "GetDriveTypeA"_
+ (ByVal nDrive As String) As Long
+
+Public Const DRIVE_REMOVABLE = 2
+Public Const DRIVE_FIXED = 3
+Public Const DRIVE_REMOTE = 4
+Public Const DRIVE_CDROM = 5
+Public Const DRIVE_RAMDISK = 6
+Volání: 
+Private Function rgbGetDriveType(RootPathName$) As String
+  Dim r As Long
+  r& = GetDriveType(RootPathName$)
+  Select Case r&
+    Case 0:               rgbGetDriveType$ = "Jednotka nemùe bıt urèena."
+    Case 1:               rgbGetDriveType$ = "Root adresáø neexistuje."
+    Case DRIVE_REMOVABLE:
+        Select Case Left$(RootPathName$, 1)
+            Case "a", "b": rgbGetDriveType$ = "Jednotka floppy."
+            Case Else:     rgbGetDriveType$ = "Vımìnná jednotka."
+        End Select
+    Case DRIVE_FIXED:     rgbGetDriveType$ = "Hard disk; nemùe bıt odstranìn."
+    Case DRIVE_REMOTE:    rgbGetDriveType$ = "Vzdálená (síová) jednotka."
+    Case DRIVE_CDROM:     rgbGetDriveType$ = "Jednotka CD-ROM."
+    Case DRIVE_RAMDISK:   rgbGetDriveType$ = "RAM disk."
+    End Select
+End Function
+
+Private Function VBGetLogicalDriveStrings() As String
+  Dim r As Long
+  Dim i As Integer
+  Dim tmp As String
+  tmp$ = Space$(64)
+  r& = GetLogicalDriveStrings(Len(tmp$), tmp$)
+  VBGetLogicalDriveStrings = Trim$(tmp$)
+End Function
+
+Private Function StripNulls(startStrg$) As String
+  Dim c As Integer
+  Dim item As String
+  c% = 1
+  Do
+    If Mid$(startStrg$, c%, 1) = Chr$(0) Then
+      item$ = Mid$(startStrg$, 1, c% - 1)
+      startStrg$ = Mid$(startStrg$, c% + 1, Len(startStrg$))
+      StripNulls$ = item$
+      Exit Function
+    End If
+    c% = c% + 1
+  Loop
+End Function
+
+Private Sub Command1_Click()
+Dim r As Long
+Dim allDrives As String
+Dim currDrive As String
+Dim drvType As String
+'získá seznam všech dostupnıch jednotek
+allDrives$ = VBGetLogicalDriveStrings()
+Do Until allDrives$ = Chr$(0)
+  currDrive$ = StripNulls$(allDrives$)
+  drvType$ = rgbGetDriveType(currDrive$) 'Zjišuje typ jednotky
+  Print "  " & currDrive$ & vbTab & drvType$ 'Vypíše vısledky
+  Loop
+End Sub
+AKTIVACE CAPS A NUM LOCKU
+Je to jen pár øádkù kódu. Vytvoøíte modul a do nìj zkopírujete následujcí text: 
+Public Const VK_CAPITAL = &H14
+Public Const VK_NUMLOCK = &H90
+Public Type KeyboardBytes
+     kbByte(0 To 255) As Byte
+End Type
+Public kbArray As KeyboardBytes
+Public Declare Function GetKeyState Lib "user32" (ByVal nVirtKey As Long) As Long
+Public Declare Function GetKeyboardState Lib "user32" (kbArray As KeyboardBytes) As Long
+Public Declare Function SetKeyboardState Lib "user32" (kbArray As KeyboardBytes) As Long
+Volání pak probíhá asi takto: Pro aktivaci: 
+  GetKeyboardState kbArray
+  kbArray.kbByte(konstanta klávesy) = 1
+  SetKeyboardState kbArray
+Pro deaktivaci: 
+  GetKeyboardState kbArray
+  kbArray.kbByte(konstanta klávesy) = 0
+  SetKeyboardState kbArray
+Konstanty: 
+VK_NUMLOCK
+VK_CAPITAL
+
+URCENI PRACOVNICH DNU
+Je to jednoduché. Vytvoøíte si modul a do nìj pøekopírujete následující øádku.
+
+Pro Visual basic 5.0:
+Function getBusDays(SDate As Date, EDate As Date) As Integer
+  Dim tmpDay As Integer
+  getBusDays = 0
+  Do Until SDate = EDate
+    tmpDay = Format(SDate, "W")
+    Select Case tmpDay
+      Case 2, 3, 4, 5, 6
+      getBusDays = getBusDays + 1
+    End Select
+  SDate = DateAdd("d", 1, SDate)
+Loop
+End Function
+
+Volání:
+MsgBox getBusDays("poèáteèní datum", "koncové datum")
+
+Vrátí poèet dnù. Nepracuje se svátky.
+
+
+Scrollování textu
+TextPole.SetFocus 
+SendKeys ("{DOWN}") 
+
